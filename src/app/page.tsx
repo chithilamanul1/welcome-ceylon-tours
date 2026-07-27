@@ -48,7 +48,7 @@ export default function Home() {
             <div className="swiper-slide">
               <div className="box second" style={{ position: 'relative', overflow: 'hidden' }}>
                 <Image
-                  src="/images/sigiriya12.webp"
+                  src="/images/sigiriya2.jpg"
                   alt="Visit Sri Lanka"
                   fill
                   style={{ objectFit: 'cover', zIndex: -2 }}
@@ -69,7 +69,7 @@ export default function Home() {
             <div className="swiper-slide">
               <div className="box second" style={{ position: 'relative', overflow: 'hidden' }}>
                 <Image
-                  src="/images/9arch2.jpg"
+                  src="/images/rail image.jpg"
                   alt="Welcome to Paradise"
                   fill
                   style={{ objectFit: 'cover', zIndex: -2 }}
@@ -90,7 +90,7 @@ export default function Home() {
             <div className="swiper-slide">
               <div className="box second" style={{ position: 'relative', overflow: 'hidden' }}>
                 <Image
-                  src="/images/colombo.jpg"
+                  src="/images/orkhanshots.jpg"
                   alt="Explore the Island"
                   fill
                   style={{ objectFit: 'cover', zIndex: -2 }}
@@ -111,7 +111,7 @@ export default function Home() {
             <div className="swiper-slide">
               <div className="box second" style={{ position: 'relative', overflow: 'hidden' }}>
                 <Image
-                  src="/images/beach.jpg"
+                  src="/images/beach-2.jpg"
                   alt="Wonder of Asia"
                   fill
                   style={{ objectFit: 'cover', zIndex: -2 }}
