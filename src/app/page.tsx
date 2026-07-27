@@ -46,13 +46,16 @@ export default function Home() {
         <div className="swiper home-slider">
           <div className="swiper-wrapper">
             <div className="swiper-slide">
-              <div className="box second" style={{
-                backgroundImage: "linear-gradient(45deg, rgba(0, 0, 0, 0.615), rgba(255, 255, 0, 0)), url('/images/sigiriya12.webp')",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat"
-              }}>
-                <div className="content">
+              <div className="box second" style={{ position: 'relative', overflow: 'hidden' }}>
+                <Image
+                  src="/images/sigiriya12.webp"
+                  alt="Visit Sri Lanka"
+                  fill
+                  style={{ objectFit: 'cover', zIndex: -2 }}
+                  priority
+                />
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(45deg, rgba(0, 0, 0, 0.615), rgba(255, 255, 0, 0))', zIndex: -1 }} />
+                <div className="content" style={{ position: 'relative', zIndex: 1 }}>
                   <span style={{ color: "white" }}>#Visit</span>
                   <h3>Sri Lanka</h3>
                   <p style={{ color: "white" }}>
@@ -64,13 +67,16 @@ export default function Home() {
             </div>
 
             <div className="swiper-slide">
-              <div className="box second" style={{
-                backgroundImage: "linear-gradient(45deg, rgba(0, 0, 0, 0.615), rgba(255, 255, 0, 0)), url('/images/9arch2.jpg')",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat"
-              }}>
-                <div className="content">
+              <div className="box second" style={{ position: 'relative', overflow: 'hidden' }}>
+                <Image
+                  src="/images/9arch2.jpg"
+                  alt="Welcome to Paradise"
+                  fill
+                  style={{ objectFit: 'cover', zIndex: -2 }}
+                  priority
+                />
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(45deg, rgba(0, 0, 0, 0.615), rgba(255, 255, 0, 0))', zIndex: -1 }} />
+                <div className="content" style={{ position: 'relative', zIndex: 1 }}>
                   <span style={{ color: "white" }}>Welcome to</span>
                   <h3>Paradise</h3>
                   <p style={{ color: "white" }}>
@@ -82,13 +88,16 @@ export default function Home() {
             </div>
 
             <div className="swiper-slide">
-              <div className="box second" style={{
-                backgroundImage: "linear-gradient(#ffffff00, #000000a0), url('/images/colombo.jpg')",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat"
-              }}>
-                <div className="content">
+              <div className="box second" style={{ position: 'relative', overflow: 'hidden' }}>
+                <Image
+                  src="/images/colombo.jpg"
+                  alt="Explore the Island"
+                  fill
+                  style={{ objectFit: 'cover', zIndex: -2 }}
+                  priority
+                />
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(#ffffff00, #000000a0)', zIndex: -1 }} />
+                <div className="content" style={{ position: 'relative', zIndex: 1 }}>
                   <span style={{ color: "white" }}>Explore the</span>
                   <h3>Island</h3>
                   <p style={{ color: "white" }}>
@@ -100,13 +109,16 @@ export default function Home() {
             </div>
 
             <div className="swiper-slide">
-              <div className="box second" style={{
-                backgroundImage: "linear-gradient(45deg, rgba(0, 0, 0, 0.615), rgba(255, 255, 0, 0)), url('/images/beach.jpg')",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat"
-              }}>
-                <div className="content">
+              <div className="box second" style={{ position: 'relative', overflow: 'hidden' }}>
+                <Image
+                  src="/images/beach.jpg"
+                  alt="Wonder of Asia"
+                  fill
+                  style={{ objectFit: 'cover', zIndex: -2 }}
+                  priority
+                />
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(45deg, rgba(0, 0, 0, 0.615), rgba(255, 255, 0, 0))', zIndex: -1 }} />
+                <div className="content" style={{ position: 'relative', zIndex: 1 }}>
                   <span style={{ color: "white" }}>Wonder of</span>
                   <h3>Asia</h3>
                   <p style={{ color: "white" }}>
