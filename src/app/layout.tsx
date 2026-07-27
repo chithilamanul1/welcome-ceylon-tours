@@ -57,11 +57,12 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="/css/style.css" />
       </head>
       <body>
         {children}
+        <Script src="https://code.jquery.com/jquery-3.6.0.min.js" strategy="beforeInteractive" />
         <Script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" strategy="beforeInteractive" />
         <Script src="/js/script.js" strategy="lazyOnload" />
       </body>

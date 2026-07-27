@@ -1550,7 +1550,8 @@ a .news__item:hover {
 
 @media screen and (max-width: 992px) {
   .card {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     margin: auto;
   }
   .card .data .Econtent {
@@ -1561,7 +1562,8 @@ a .news__item:hover {
 
 @media screen and (max-width: 600px) {
   .card {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     margin: auto;
   }
   .card .data .Econtent {

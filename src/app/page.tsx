@@ -8,7 +8,7 @@ export default function Home() {
 
       {/* header section starts */}
       <header className="header">
-        <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px', fontFamily: "'Great Vibes', cursive", fontSize: "2rem", fontWeight: "normal" }}>
           <img src="/logo.png" alt="Welcome Ceylon Tours Logo" style={{ width: '40px', height: '40px', borderRadius: '50%' }} />
           Welcome Ceylon Tours
         </Link>
