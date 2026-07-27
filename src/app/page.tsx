@@ -49,11 +49,11 @@ export default function Home() {
                   src="/images/sigiriya2.jpg"
                   alt="Visit Sri Lanka"
                   fill
-                  style={{ objectFit: 'cover', zIndex: -2 }}
+                  style={{ objectFit: 'cover', zIndex: 0 }}
                   priority
                 />
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(45deg, rgba(0, 0, 0, 0.615), rgba(255, 255, 0, 0))', zIndex: -1 }} />
-                <div className="content" style={{ position: 'relative', zIndex: 1 }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(45deg, rgba(0, 0, 0, 0.615), rgba(255, 255, 0, 0))', zIndex: 1 }} />
+                <div className="content" style={{ position: 'relative', zIndex: 2 }}>
                   <span style={{ color: "white" }}>#Visit</span>
                   <h3>Sri Lanka</h3>
                   <p style={{ color: "white" }}>
@@ -70,11 +70,11 @@ export default function Home() {
                   src="/images/rail image.jpg"
                   alt="Welcome to Paradise"
                   fill
-                  style={{ objectFit: 'cover', zIndex: -2 }}
+                  style={{ objectFit: 'cover', zIndex: 0 }}
                   priority
                 />
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(45deg, rgba(0, 0, 0, 0.615), rgba(255, 255, 0, 0))', zIndex: -1 }} />
-                <div className="content" style={{ position: 'relative', zIndex: 1 }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(45deg, rgba(0, 0, 0, 0.615), rgba(255, 255, 0, 0))', zIndex: 1 }} />
+                <div className="content" style={{ position: 'relative', zIndex: 2 }}>
                   <span style={{ color: "white" }}>Welcome to</span>
                   <h3>Paradise</h3>
                   <p style={{ color: "white" }}>
@@ -91,11 +91,11 @@ export default function Home() {
                   src="/images/orkhanshots.jpg"
                   alt="Explore the Island"
                   fill
-                  style={{ objectFit: 'cover', zIndex: -2 }}
+                  style={{ objectFit: 'cover', zIndex: 0 }}
                   priority
                 />
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(#ffffff00, #000000a0)', zIndex: -1 }} />
-                <div className="content" style={{ position: 'relative', zIndex: 1 }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(#ffffff00, #000000a0)', zIndex: 1 }} />
+                <div className="content" style={{ position: 'relative', zIndex: 2 }}>
                   <span style={{ color: "white" }}>Explore the</span>
                   <h3>Island</h3>
                   <p style={{ color: "white" }}>

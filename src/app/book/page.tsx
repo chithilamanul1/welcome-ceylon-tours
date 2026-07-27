@@ -165,8 +165,9 @@ export default function BookPage() {
                         </form>
                     </div>
                 </div>
+            </div>
 
-                <Footer />
-            </>
-            );
+            <Footer />
+        </>
+    );
 }
