@@ -397,7 +397,7 @@ export default function Home() {
           </div>
         </div>
 
-        <svg hidden={true}>
+        <svg style={{ display: 'none' }}>
           <defs>
             <symbol id="icon-arrow-left" viewBox="0 0 32 32">
               <title>arrow-left</title>
