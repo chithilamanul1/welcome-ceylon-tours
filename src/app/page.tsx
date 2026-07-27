@@ -46,7 +46,12 @@ export default function Home() {
         <div className="swiper home-slider">
           <div className="swiper-wrapper">
             <div className="swiper-slide">
-              <div className="box second" style={{ background: "linear-gradient(45deg, rgba(0, 0, 0, 0.615), rgba(255, 255, 0, 0)), url(/images/sigiriya12.webp) center/cover no-repeat" }}>
+              <div className="box second" style={{
+                backgroundImage: "linear-gradient(45deg, rgba(0, 0, 0, 0.615), rgba(255, 255, 0, 0)), url('/images/sigiriya12.webp')",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat"
+              }}>
                 <div className="content">
                   <span style={{ color: "white" }}>#Visit</span>
                   <h3>Sri Lanka</h3>
@@ -59,7 +64,12 @@ export default function Home() {
             </div>
 
             <div className="swiper-slide">
-              <div className="box second" style={{ background: "linear-gradient(45deg, rgba(0, 0, 0, 0.615), rgba(255, 255, 0, 0)), url(/images/9arch2.jpg) no-repeat" }}>
+              <div className="box second" style={{
+                backgroundImage: "linear-gradient(45deg, rgba(0, 0, 0, 0.615), rgba(255, 255, 0, 0)), url('/images/9arch2.jpg')",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat"
+              }}>
                 <div className="content">
                   <span style={{ color: "white" }}>Welcome to</span>
                   <h3>Paradise</h3>
@@ -72,7 +82,12 @@ export default function Home() {
             </div>
 
             <div className="swiper-slide">
-              <div className="box second" style={{ background: "linear-gradient(#ffffff00, #000000a0), url(/images/colombo.jpg) center/cover no-repeat" }}>
+              <div className="box second" style={{
+                backgroundImage: "linear-gradient(#ffffff00, #000000a0), url('/images/colombo.jpg')",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat"
+              }}>
                 <div className="content">
                   <span style={{ color: "white" }}>Explore the</span>
                   <h3>Island</h3>
@@ -85,7 +100,12 @@ export default function Home() {
             </div>
 
             <div className="swiper-slide">
-              <div className="box second" style={{ background: "linear-gradient(45deg, rgba(0, 0, 0, 0.615), rgba(255, 255, 0, 0)), url(/images/beach.jpg) center/cover no-repeat" }}>
+              <div className="box second" style={{
+                backgroundImage: "linear-gradient(45deg, rgba(0, 0, 0, 0.615), rgba(255, 255, 0, 0)), url('/images/beach.jpg')",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat"
+              }}>
                 <div className="content">
                   <span style={{ color: "white" }}>Wonder of</span>
                   <h3>Asia</h3>
