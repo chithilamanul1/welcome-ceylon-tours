@@ -135,37 +135,31 @@ export default function Home() {
       </section>
       {/* home section ends */}
 
-      {/* category/adventure section starts */}
+      {/* category/services section starts */}
       <section className="category adventure" id="adventure">
-        <h1 className="heading">adventure Activities</h1>
+        <h1 className="heading">Our Services</h1>
         <div className="box-container">
           <div className="box">
-            <img src="/images/paragliding.jpg" alt="" />
-            <h3>Paragliding</h3>
-            <p>Recently introduced to Sri Lanka, this adventure sport is an ideal way to indulge yourself...</p>
-            <a href="#para" className="btn">read more</a>
+            <img src="/images/rail image.jpg" alt="Tour Packages" />
+            <h3>Tour Packages</h3>
+            <p>Explore the beauty of Sri Lanka with our carefully crafted tour packages tailored to your preferences...</p>
+            <a href="#tours" className="btn">read more</a>
           </div>
           <div className="box">
-            <img src="/images/helicopter.jpg" alt="" />
-            <h3>Helicopter Tours</h3>
-            <p>Whether you in a packed schedule or hate wasting time on the road or simply like to indulge...</p>
-            <a href="#heli" className="btn">read more</a>
+            <img src="/images/colombo.jpg" alt="Airport Transfers" />
+            <h3>Airport Transfers</h3>
+            <p>Enjoy a hassle-free start to your vacation with our reliable and comfortable airport transfer services...</p>
+            <a href="#transfers" className="btn">read more</a>
           </div>
           <div className="box">
-            <img src="/images/balloon.jpg" alt="" />
-            <h3>Hot Air Ballooning</h3>
-            <p>Why Not Enjoy This Beautiful Paradise In The Bird’s Eye View Floating Over The Thick Dense Forests...</p>
-            <a href="#balloon" className="btn">read more</a>
-          </div>
-          <div className="box">
-            <img src="/images/safa2.jpg" alt="" />
-            <h3>Wild life Safari</h3>
-            <p>With a wildlife abundance rich in diversity and quantity, Sri Lanka promises you...</p>
-            <a href="#safa" className="btn">read more</a>
+            <img src="/images/safa2.jpg" alt="Safari Tours" />
+            <h3>Safari Tours</h3>
+            <p>Experience the thrill of the wild with our exciting safari tours in Sri Lanka's top national parks...</p>
+            <a href="#safari" className="btn">read more</a>
           </div>
         </div>
       </section>
-      {/* category/adventure section ends */}
+      {/* category/services section ends */}
 
       {/* map section starts */}
       <section className="map" id="map">
@@ -450,12 +444,12 @@ export default function Home() {
         <div className="swiper review-slider">
           <div className="swiper-wrapper">
             <div className="swiper-slide slide">
-              <p className="text">Fantastic! Really great country with hospitable people who are excited to show you around. The places we went to were really varied...Sri Lanka has everything...coasts, wildlife, mountains, culture, food....and so much more.</p>
+              <p className="text">My family were based in Negombo for two weeks and Rukshan took us on a number of excursions including Sigiriya, Dambulla, Nuwara Eliya, Ella, Kandy and Galle. Rukshan is very friendly and an excellent tour guide who is flexible, experienced and knowledgeable about the key sites across Sri Lanka - I highly recommend him.</p>
               <div className="user">
                 <img src="/images/pic-1.png" alt="" />
                 <div className="info">
-                  <h3>David Thomsan</h3>
-                  <span>United Kingdom</span>
+                  <h3>Samara Smith</h3>
+                  <span>10 months ago</span>
                 </div>
               </div>
             </div>
@@ -526,16 +520,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="clients">
-        <div className="swiper clients-slider">
-          <div className="swiper-wrapper">
-            <div className="swiper-slide silde"><img src="/images/client-logo-1.png" alt="" /></div>
-            <div className="swiper-slide silde"><img src="/images/client-logo-2.png" alt="" /></div>
-            <div className="swiper-slide silde"><img src="/images/client-logo-3.png" alt="" /></div>
-            <div className="swiper-slide silde"><img src="/images/client-logo-4.png" alt="" /></div>
-          </div>
-        </div>
-      </section>
+
 
       {/* footer section starts */}
       <section className="footer">
@@ -561,8 +546,8 @@ export default function Home() {
           </div>
           <div className="box">
             <h3>contact info</h3>
-            <a href="#"> <i className="fas fa-phone"></i> +94 123 456 789 </a>
-            <a href="#"> <i className="fas fa-envelope"></i> info@welcomeceylontours.com </a>
+            <a href="tel:+94777535969"> <i className="fas fa-phone"></i> 077 753 5969 </a>
+            <a href="mailto:info@welcomeceylontours.lk"> <i className="fas fa-envelope"></i> info@welcomeceylontours.lk </a>
             <a href="#"> <i className="fas fa-map"></i> Negombo, Sri Lanka</a>
           </div>
           <div className="box">
@@ -574,7 +559,7 @@ export default function Home() {
             <a href="#" target="_blank"><i className="fab fa-pinterest"></i> pinterest </a>
           </div>
         </div>
-        <div className="credit">Made with 🤍 in<span> Sri Lanka</span> <br /> Copyright ©️ {new Date().getFullYear()} - Welcome Ceylon Tours!</div>
+        <div className="credit">Made by <a href="https://seranex.lk" target="_blank" style={{ color: '#219150' }}>seranex.lk</a> and love with <a href="https://github.com/chithilamanul1" target="_blank" style={{ color: '#219150' }}>chithila manul</a> <br /> Copyright ©️ {new Date().getFullYear()} - Welcome Ceylon Tours!</div>
       </section>
       {/* footer section ends */}
 
