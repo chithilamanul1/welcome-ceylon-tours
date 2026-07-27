@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -8,21 +9,18 @@ export default function Home() {
 
       {/* header section starts */}
       <header className="header">
-        <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px', fontFamily: "'Great Vibes', cursive", fontSize: "2rem", fontWeight: "normal" }}>
-          <img src="/logo.png" alt="Welcome Ceylon Tours Logo" style={{ width: '40px', height: '40px', borderRadius: '50%' }} />
+        <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px', fontFamily: "'Great Vibes', cursive", fontSize: "2.5rem", fontWeight: "normal" }}>
+          <img src="/logo.png" alt="Welcome Ceylon Tours Logo" style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
           Welcome Ceylon Tours
         </Link>
 
         <nav className="navbar">
           <div id="nav-close" className="fas fa-times"></div>
-          <Link href="/">home</Link>
-          <Link href="#adventure">Adventure</Link>
-          <Link href="#map">map</Link>
-          <Link href="#blogs">blogs</Link>
-          <Link href="#events">Events</Link>
-          <Link href="#products">Products</Link>
-          <Link href="/book">Book Now</Link>
-          <Link href="/admin">Admin</Link>
+          <Link href="/">Home</Link>
+          <Link href="/about">About</Link>
+          <Link href="/tours">Tours</Link>
+          <Link href="/destinations">Destinations</Link>
+          <Link href="/book">Contact Us/Book Now</Link>
         </nav>
 
         <div className="icons">
@@ -59,7 +57,7 @@ export default function Home() {
                   <span style={{ color: "white" }}>#Visit</span>
                   <h3>Sri Lanka</h3>
                   <p style={{ color: "white" }}>
-                    Welcome Ceylon Tours, based in Negombo, offers you the best experiences in Sri Lanka. It is known for its beautiful beaches, ancient temples and palaces, and stunning natural landscapes.
+                    Welcome Ceylon Tours is the #1 travel agency in Sri Lanka, offering the best experiences across the island. Discover the wonders of Sri Lanka with Welcome Ceylon Tours, your trusted partner for unforgettable journeys.
                   </p>
                   <Link href="/book" className="hbtn">book now</Link>
                 </div>
@@ -80,7 +78,7 @@ export default function Home() {
                   <span style={{ color: "white" }}>Welcome to</span>
                   <h3>Paradise</h3>
                   <p style={{ color: "white" }}>
-                    Welcome Ceylon Tours, based in Negombo, offers you the best experiences in Sri Lanka. It is known for its beautiful beaches, ancient temples and palaces, and stunning natural landscapes.
+                    Welcome Ceylon Tours is the #1 travel agency in Sri Lanka, offering the best experiences across the island. Discover the wonders of Sri Lanka with Welcome Ceylon Tours, your trusted partner for unforgettable journeys.
                   </p>
                   <Link href="/book" className="hbtn">book now</Link>
                 </div>
@@ -101,7 +99,7 @@ export default function Home() {
                   <span style={{ color: "white" }}>Explore the</span>
                   <h3>Island</h3>
                   <p style={{ color: "white" }}>
-                    Welcome Ceylon Tours, based in Negombo, offers you the best experiences in Sri Lanka. It is known for its beautiful beaches, ancient temples and palaces, and stunning natural landscapes.
+                    Welcome Ceylon Tours is the #1 travel agency in Sri Lanka, offering the best experiences across the island. Discover the wonders of Sri Lanka with Welcome Ceylon Tours, your trusted partner for unforgettable journeys.
                   </p>
                   <Link href="/book" className="hbtn">book now</Link>
                 </div>
@@ -122,7 +120,7 @@ export default function Home() {
                   <span style={{ color: "white" }}>Wonder of</span>
                   <h3>Asia</h3>
                   <p style={{ color: "white" }}>
-                    Welcome Ceylon Tours, based in Negombo, offers you the best experiences in Sri Lanka. It is known for its beautiful beaches, ancient temples and palaces, and stunning natural landscapes.
+                    Welcome Ceylon Tours is the #1 travel agency in Sri Lanka, offering the best experiences across the island. Discover the wonders of Sri Lanka with Welcome Ceylon Tours, your trusted partner for unforgettable journeys.
                   </p>
                   <Link href="/book" className="hbtn">book now</Link>
                 </div>
@@ -522,46 +520,7 @@ export default function Home() {
 
 
 
-      {/* footer section starts */}
-      <section className="footer">
-        <div className="box-container">
-          <div className="box">
-            <h3>quick links</h3>
-            <Link href="/">home</Link>
-            <Link href="#adventure">adventure</Link>
-            <Link href="#map">map</Link>
-            <Link href="#blogs">blog</Link>
-            <Link href="#events">events</Link>
-            <Link href="#products">products</Link>
-            <Link href="/book">book now</Link>
-          </div>
-          <div className="box">
-            <h3>extra links</h3>
-            <a href="#">my account</a>
-            <a href="#">my order</a>
-            <a href="#">my wishlist</a>
-            <a href="#">ask questions</a>
-            <a href="#">terms of use</a>
-            <a href="#">privacy policy</a>
-          </div>
-          <div className="box">
-            <h3>contact info</h3>
-            <a href="tel:+94777535969"> <i className="fas fa-phone"></i> 077 753 5969 </a>
-            <a href="mailto:info@welcomeceylontours.lk"> <i className="fas fa-envelope"></i> info@welcomeceylontours.lk </a>
-            <a href="#"> <i className="fas fa-map"></i> Negombo, Sri Lanka</a>
-          </div>
-          <div className="box">
-            <h3>follow us</h3>
-            <a href="#" target="_blank"> <i className="fab fa-facebook-f"></i> facebook </a>
-            <a href="#" target="_blank"> <i className="fab fa-twitter"></i> twitter </a>
-            <a href="#" target="_blank"> <i className="fab fa-instagram"></i> instagram </a>
-            <a href="#" target="_blank"> <i className="fab fa-linkedin"></i> linkedin </a>
-            <a href="#" target="_blank"><i className="fab fa-pinterest"></i> pinterest </a>
-          </div>
-        </div>
-        <div className="credit">Made by <a href="https://seranex.lk" target="_blank" style={{ color: '#219150' }}>seranex.lk</a> and love with <a href="https://github.com/chithilamanul1" target="_blank" style={{ color: '#219150' }}>chithila manul</a> <br /> Copyright ©️ {new Date().getFullYear()} - Welcome Ceylon Tours!</div>
-      </section>
-      {/* footer section ends */}
+      <Footer />
 
       {/* scroller to top */}
       <a href="#top" className="to-top">
