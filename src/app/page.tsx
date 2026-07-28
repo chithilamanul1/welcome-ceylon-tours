@@ -202,7 +202,7 @@ export default function Home() {
             <div className="swiper-slide slide">
               <img src="/images/dalada.webp" alt="" />
               <div className="icons">
-                <a href="#"> <i className="fas fa-calendar"></i> 25th Dec, 2022 </a>
+                <a href="#"> <i className="fas fa-calendar"></i> 15th Jun, 2026 </a>
                 <a href="#"> <i className="fas fa-user"></i> by admin </a>
               </div>
               <h3>Temple Of Tooth</h3>
@@ -212,7 +212,7 @@ export default function Home() {
             <div className="swiper-slide slide">
               <img src="/images/unawatuna.webp" alt="" />
               <div className="icons">
-                <a href="#"> <i className="fas fa-calendar"></i> 25th Dec, 2022 </a>
+                <a href="#"> <i className="fas fa-calendar"></i> 15th Jun, 2026 </a>
                 <a href="#"> <i className="fas fa-user"></i> by admin </a>
               </div>
               <h3>Unawatuna Beach</h3>
@@ -222,7 +222,7 @@ export default function Home() {
             <div className="swiper-slide slide">
               <img src="/images/peradeniya.webp" alt="" />
               <div className="icons">
-                <a href="#"> <i className="fas fa-calendar"></i> 25th Dec, 2022 </a>
+                <a href="#"> <i className="fas fa-calendar"></i> 15th Jun, 2026 </a>
                 <a href="#"> <i className="fas fa-user"></i> by admin </a>
               </div>
               <h3>Peradeniya Botanical Garden</h3>
@@ -232,7 +232,7 @@ export default function Home() {
             <div className="swiper-slide slide">
               <img src="/images/gangarama.jpg" alt="" />
               <div className="icons">
-                <a href="#"> <i className="fas fa-calendar"></i> 25th Dec, 2022 </a>
+                <a href="#"> <i className="fas fa-calendar"></i> 15th Jun, 2026 </a>
                 <a href="#"> <i className="fas fa-user"></i> by admin </a>
               </div>
               <h3>Gangaramaya Temple</h3>
@@ -252,9 +252,9 @@ export default function Home() {
             <div className="wrapper">
               <div className="head">
                 <div className="date">
-                  <span className="day">05</span>
+                  <span className="day">01</span>
                   <span className="month">Dec</span>
-                  <span className="year">2022</span>
+                  <span className="year">2026</span>
                 </div>
                 <ul className="menu-content">
                   <li><a href="#" className="fa fa-bookmark-o"></a></li>
@@ -277,9 +277,9 @@ export default function Home() {
             <div className="wrapper" style={{ background: "linear-gradient(#ffffff00, #00000082), url(/images/awurudu.jpg) center/cover no-repeat" }}>
               <div className="head">
                 <div className="date">
-                  <span className="day">05</span>
-                  <span className="month">Dec</span>
-                  <span className="year">2022</span>
+                  <span className="day">13</span>
+                  <span className="month">Apr</span>
+                  <span className="year">2027</span>
                 </div>
                 <ul className="menu-content">
                   <li><a href="#" className="fa fa-bookmark-o"></a></li>
@@ -290,7 +290,7 @@ export default function Home() {
               <div className="data">
                 <div className="Econtent">
                   <span className="author">Welcome Ceylon Tours</span>
-                  <h1 className="title"><a href="#">Sinhala & Hindu New Year - 2023</a></h1>
+                  <h1 className="title"><a href="#">Sinhala & Hindu New Year - 2027</a></h1>
                   <p className="text1">Sinhalese New Year, generally known as Aluth Avurudda in Sri Lanka, is a Sri Lankan holiday that celebrates the...</p>
                   <a href="#awurudu" className="Ebutton">Read more</a>
                 </div>
@@ -302,9 +302,9 @@ export default function Home() {
             <div className="wrapper" style={{ background: "linear-gradient(#ffffff00, #00000082), url(/images/perahera.jpg) center/cover no-repeat" }}>
               <div className="head">
                 <div className="date">
-                  <span className="day">05</span>
-                  <span className="month">Dec</span>
-                  <span className="year">2022</span>
+                  <span className="day">15</span>
+                  <span className="month">Aug</span>
+                  <span className="year">2026</span>
                 </div>
                 <ul className="menu-content">
                   <li><a href="#" className="fa fa-bookmark-o"></a></li>
@@ -315,7 +315,7 @@ export default function Home() {
               <div className="data">
                 <div className="Econtent">
                   <span className="author">Welcome Ceylon Tours</span>
-                  <h1 className="title"><a href="#">Asala Perahera - 2023</a></h1>
+                  <h1 className="title"><a href="#">Asala Perahera - 2026</a></h1>
                   <p className="text1">The Kandy Esala Perahera (the Sri Dalada Perahara procession of Kandy) also known as The... </p>
                   <a href="#asala" className="Ebutton">Read more</a>
                 </div>
@@ -327,9 +327,9 @@ export default function Home() {
             <div className="wrapper" style={{ background: "url(/images/vesak.jpg) center/cover no-repeat" }}>
               <div className="head">
                 <div className="date">
-                  <span className="day">05</span>
-                  <span className="month">Dec</span>
-                  <span className="year">2022</span>
+                  <span className="day">01</span>
+                  <span className="month">May</span>
+                  <span className="year">2027</span>
                 </div>
                 <ul className="menu-content">
                   <li><a href="#" className="fa fa-bookmark-o"></a></li>
