@@ -81,112 +81,112 @@ export default function BookPage() {
                     </h1>
                 </div>
 
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div className="max-w-7xl mx-auto px-[2rem] sm:px-[3rem] lg:px-[4rem] normal-case">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-[4rem]">
                         {/* Contact Details Column */}
-                        <div className="space-y-6">
+                        <div className="space-y-[2rem]">
                             {/* Card 1 */}
-                            <div className="bg-gray-50 rounded-2xl p-6 flex items-start gap-4 border border-gray-100 shadow-sm">
-                                <div className="bg-yellow-50 p-4 rounded-full text-[#c89b3c] flex items-center justify-center">
-                                    <i className="fas fa-map-marker-alt text-xl"></i>
+                            <div className="bg-gray-50 rounded-[1.5rem] p-[2rem] flex items-start gap-[1.5rem] border border-gray-100 shadow-sm">
+                                <div className="bg-yellow-50 p-[1.5rem] rounded-full text-[#c89b3c] flex items-center justify-center">
+                                    <i className="fas fa-map-marker-alt text-[2rem]"></i>
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif">Visit us</h3>
-                                    <p className="text-gray-600 text-lg">Negombo, Sri Lanka</p>
+                                    <h3 className="text-[2rem] font-bold text-gray-900 mb-[1rem] font-serif">Visit us</h3>
+                                    <p className="text-[1.6rem] text-gray-600">Negombo, Sri Lanka</p>
                                 </div>
                             </div>
                             {/* Card 2 */}
-                            <div className="bg-gray-50 rounded-2xl p-6 flex items-start gap-4 border border-gray-100 shadow-sm">
-                                <div className="bg-yellow-50 p-4 rounded-full text-[#c89b3c] flex items-center justify-center">
-                                    <i className="fas fa-phone-alt text-xl"></i>
+                            <div className="bg-gray-50 rounded-[1.5rem] p-[2rem] flex items-start gap-[1.5rem] border border-gray-100 shadow-sm">
+                                <div className="bg-yellow-50 p-[1.5rem] rounded-full text-[#c89b3c] flex items-center justify-center">
+                                    <i className="fas fa-phone-alt text-[2rem]"></i>
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif">Call us</h3>
-                                    <p className="text-gray-600 text-lg">+94 77 123 4567 (WhatsApp)</p>
+                                    <h3 className="text-[2rem] font-bold text-gray-900 mb-[1rem] font-serif">Call us</h3>
+                                    <p className="text-[1.6rem] text-gray-600">+94 77 123 4567 (WhatsApp)</p>
                                 </div>
                             </div>
                             {/* Card 3 */}
-                            <div className="bg-gray-50 rounded-2xl p-6 flex items-start gap-4 border border-gray-100 shadow-sm">
-                                <div className="bg-yellow-50 p-4 rounded-full text-[#c89b3c] flex items-center justify-center">
-                                    <i className="fas fa-envelope text-xl"></i>
+                            <div className="bg-gray-50 rounded-[1.5rem] p-[2rem] flex items-start gap-[1.5rem] border border-gray-100 shadow-sm">
+                                <div className="bg-yellow-50 p-[1.5rem] rounded-full text-[#c89b3c] flex items-center justify-center">
+                                    <i className="fas fa-envelope text-[2rem]"></i>
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif">Email us</h3>
-                                    <p className="text-gray-600 text-lg">info@welcomeceylontours.com</p>
+                                    <h3 className="text-[2rem] font-bold text-gray-900 mb-[1rem] font-serif">Email us</h3>
+                                    <p className="text-[1.6rem] text-gray-600 normal-case">info@welcomeceylontours.com</p>
                                 </div>
                             </div>
                             {/* Card 4 */}
-                            <div className="bg-gray-50 rounded-2xl p-6 flex items-start gap-4 border border-gray-100 shadow-sm">
-                                <div className="bg-yellow-50 p-4 rounded-full text-[#c89b3c] flex items-center justify-center">
-                                    <i className="fas fa-clock text-xl"></i>
+                            <div className="bg-gray-50 rounded-[1.5rem] p-[2rem] flex items-start gap-[1.5rem] border border-gray-100 shadow-sm">
+                                <div className="bg-yellow-50 p-[1.5rem] rounded-full text-[#c89b3c] flex items-center justify-center">
+                                    <i className="fas fa-clock text-[2rem]"></i>
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif">Office hours</h3>
-                                    <p className="text-gray-600 text-lg">Mon – Sat: 9am – 6pm</p>
-                                    <p className="text-gray-600 text-lg">Sunday: By appointment</p>
+                                    <h3 className="text-[2rem] font-bold text-gray-900 mb-[1rem] font-serif">Office hours</h3>
+                                    <p className="text-[1.6rem] text-gray-600">Mon – Sat: 9am – 6pm</p>
+                                    <p className="text-[1.6rem] text-gray-600">Sunday: By appointment</p>
                                 </div>
                             </div>
                         </div>
 
                         {/* Contact Form Column */}
-                        <div className="bg-white rounded-3xl p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100">
-                            <h2 className="text-3xl font-bold text-gray-900 mb-8 font-serif">Send us a message</h2>
+                        <div className="bg-white rounded-[2rem] p-[3rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100">
+                            <h2 className="text-[3rem] font-bold text-gray-900 mb-[3rem] font-serif">Send us a message</h2>
 
                             {status === "success" && (
-                                <div className="bg-green-50 border border-green-200 text-green-700 p-4 rounded-xl mb-8 text-center">
+                                <div className="bg-green-50 border border-green-200 text-green-700 p-[1.5rem] rounded-[1rem] mb-[3rem] text-center text-[1.6rem]">
                                     Thank you for your message! We will get back to you shortly.
                                 </div>
                             )}
 
                             {status === "error" && (
-                                <div className="bg-red-50 border border-red-200 text-red-700 p-4 rounded-xl mb-8 text-center">
+                                <div className="bg-red-50 border border-red-200 text-red-700 p-[1.5rem] rounded-[1rem] mb-[3rem] text-center text-[1.6rem]">
                                     Something went wrong. Please try again later.
                                 </div>
                             )}
 
-                            <form onSubmit={handleSubmit} className="space-y-6">
+                            <form onSubmit={handleSubmit} className="space-y-[2rem]">
                                 <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Full name</label>
+                                    <label htmlFor="name" className="block text-[1.4rem] font-medium text-gray-700 mb-[1rem]">Full name</label>
                                     <input
                                         type="text"
                                         id="name"
                                         placeholder="Your name"
                                         required
-                                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-4 text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors"
+                                        className="w-full bg-gray-50 border border-gray-200 rounded-[1rem] px-[1.5rem] py-[1.5rem] text-[1.6rem] text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors"
                                         value={formData.name}
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                    <label htmlFor="email" className="block text-[1.4rem] font-medium text-gray-700 mb-[1rem]">Email</label>
                                     <input
                                         type="email"
                                         id="email"
                                         placeholder="you@email.com"
                                         required
-                                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-4 text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors"
+                                        className="w-full bg-gray-50 border border-gray-200 rounded-[1rem] px-[1.5rem] py-[1.5rem] text-[1.6rem] text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors normal-case"
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                                    <label htmlFor="phone" className="block text-[1.4rem] font-medium text-gray-700 mb-[1rem]">Phone</label>
                                     <input
                                         type="tel"
                                         id="phone"
                                         placeholder="+94 ..."
                                         required
-                                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-4 text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors"
+                                        className="w-full bg-gray-50 border border-gray-200 rounded-[1rem] px-[1.5rem] py-[1.5rem] text-[1.6rem] text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors"
                                         value={formData.phone}
                                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="tour" className="block text-sm font-medium text-gray-700 mb-2">Interested in</label>
+                                    <label htmlFor="tour" className="block text-[1.4rem] font-medium text-gray-700 mb-[1rem]">Interested in</label>
                                     <div className="relative">
                                         <select
                                             id="tour"
-                                            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-4 text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors appearance-none"
+                                            className="w-full bg-gray-50 border border-gray-200 rounded-[1rem] px-[1.5rem] py-[1.5rem] text-[1.6rem] text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors appearance-none"
                                             value={formData.tour}
                                             onChange={(e) => setFormData({ ...formData, tour: e.target.value })}
                                         >
@@ -195,18 +195,18 @@ export default function BookPage() {
                                             <option value="beach">Coastal Bliss & Relaxation</option>
                                             <option value="custom">Custom Itinerary</option>
                                         </select>
-                                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
-                                            <i className="fas fa-chevron-down text-sm"></i>
+                                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-[1.5rem] text-gray-500">
+                                            <i className="fas fa-chevron-down text-[1.4rem]"></i>
                                         </div>
                                     </div>
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Your message</label>
+                                    <label htmlFor="message" className="block text-[1.4rem] font-medium text-gray-700 mb-[1rem]">Your message</label>
                                     <textarea
                                         id="message"
                                         rows={4}
                                         placeholder="Tell us about your dream trip..."
-                                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-4 text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors resize-none"
+                                        className="w-full bg-gray-50 border border-gray-200 rounded-[1rem] px-[1.5rem] py-[1.5rem] text-[1.6rem] text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors resize-none"
                                         value={formData.message}
                                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                     ></textarea>
@@ -214,7 +214,7 @@ export default function BookPage() {
                                 <button
                                     type="submit"
                                     disabled={status === "submitting"}
-                                    className="w-full bg-[#c89b3c] text-white font-bold text-lg py-4 rounded-xl hover:bg-[#b38a35] transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
+                                    className="w-full bg-[#c89b3c] text-white font-bold text-[1.8rem] py-[1.5rem] rounded-[1rem] hover:bg-[#b38a35] transition-colors flex items-center justify-center gap-[1rem] disabled:opacity-50"
                                 >
                                     {status === "submitting" ? "Sending..." : "Send message"}
                                     <i className="fas fa-paper-plane"></i>
