@@ -77,7 +77,7 @@ export default function Destinations() {
                         </div>
                         {/* Destination 4 */}
                         <div style={{ position: 'relative', height: '300px', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 5px 15px rgba(0,0,0,0.1)' }}>
-                            <Image src="/images/orkhanshots.jpg" alt="Yala" fill style={{ objectFit: 'cover' }} />
+                            <Image src="/images/safa2.jpg" alt="Yala" fill style={{ objectFit: 'cover' }} />
                             <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', padding: '20px', background: 'linear-gradient(transparent, rgba(0,0,0,0.8))' }}>
                                 <h3 style={{ color: '#fff', fontSize: '2.5rem', marginBottom: '5px' }}>Yala</h3>
                                 <p style={{ color: '#ddd', fontSize: '1.4rem' }}>National Park Safari</p>
