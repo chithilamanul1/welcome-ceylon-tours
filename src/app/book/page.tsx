@@ -68,7 +68,7 @@ export default function BookPage() {
                         left: '50%',
                         transform: 'translate(-50%, -50%)',
                         fontSize: 'clamp(4rem, 10vw, 10rem)',
-                        color: 'rgba(0,0,0,0.03)',
+                        color: 'rgba(0,0,0,0.08)',
                         fontFamily: "'Great Vibes', cursive",
                         zIndex: 0,
                         whiteSpace: 'nowrap',

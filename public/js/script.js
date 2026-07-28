@@ -1,21 +1,33 @@
 let navbar = document.querySelector('.header .navbar');
+let menuBtn = document.querySelector('#menu-btn');
+let navClose = document.querySelector('#nav-close');
 
-document.querySelector('#menu-btn').onclick = () => {
-    navbar.classList.add('active');
+if (menuBtn && navbar) {
+    menuBtn.onclick = () => {
+        navbar.classList.add('active');
+    }
 }
 
-document.querySelector('#nav-close').onclick = () => {
-    navbar.classList.remove('active');
+if (navClose && navbar) {
+    navClose.onclick = () => {
+        navbar.classList.remove('active');
+    }
 }
 
 let searchForm = document.querySelector('.search-form');
+let searchBtn = document.querySelector('#search-btn');
+let closeSearch = document.querySelector('#close-search');
 
-document.querySelector('#search-btn').onclick = () => {
-    searchForm.classList.add('active');
+if (searchBtn && searchForm) {
+    searchBtn.onclick = () => {
+        searchForm.classList.add('active');
+    }
 }
 
-document.querySelector('#close-search').onclick = () => {
-    searchForm.classList.remove('active');
+if (closeSearch && searchForm) {
+    closeSearch.onclick = () => {
+        searchForm.classList.remove('active');
+    }
 }
 
 window.onscroll = () => {
