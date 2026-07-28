@@ -81,107 +81,146 @@ export default function BookPage() {
                     </h1>
                 </div>
 
-                <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-lg border border-gray-200">
-                        <p className="text-gray-600 text-center mb-8 text-xl">Fill out the form below and we will get back to you shortly.</p>
-
-                        {status === "success" && (
-                            <div className="bg-green-500/20 border border-green-500 text-green-400 p-4 rounded-lg mb-8 text-center">
-                                Thank you for your booking request! We will contact you soon.
-                            </div>
-                        )}
-
-                        {status === "error" && (
-                            <div className="bg-red-500/20 border border-red-500 text-red-400 p-4 rounded-lg mb-8 text-center">
-                                Something went wrong. Please try again later.
-                            </div>
-                        )}
-
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        {/* Contact Details Column */}
+                        <div className="space-y-6">
+                            {/* Card 1 */}
+                            <div className="bg-gray-50 rounded-2xl p-6 flex items-start gap-4 border border-gray-100 shadow-sm">
+                                <div className="bg-yellow-50 p-4 rounded-full text-[#c89b3c] flex items-center justify-center">
+                                    <i className="fas fa-map-marker-alt text-xl"></i>
+                                </div>
                                 <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif">Visit us</h3>
+                                    <p className="text-gray-600 text-lg">Negombo, Sri Lanka</p>
+                                </div>
+                            </div>
+                            {/* Card 2 */}
+                            <div className="bg-gray-50 rounded-2xl p-6 flex items-start gap-4 border border-gray-100 shadow-sm">
+                                <div className="bg-yellow-50 p-4 rounded-full text-[#c89b3c] flex items-center justify-center">
+                                    <i className="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif">Call us</h3>
+                                    <p className="text-gray-600 text-lg">+94 77 123 4567 (WhatsApp)</p>
+                                </div>
+                            </div>
+                            {/* Card 3 */}
+                            <div className="bg-gray-50 rounded-2xl p-6 flex items-start gap-4 border border-gray-100 shadow-sm">
+                                <div className="bg-yellow-50 p-4 rounded-full text-[#c89b3c] flex items-center justify-center">
+                                    <i className="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif">Email us</h3>
+                                    <p className="text-gray-600 text-lg">info@welcomeceylontours.com</p>
+                                </div>
+                            </div>
+                            {/* Card 4 */}
+                            <div className="bg-gray-50 rounded-2xl p-6 flex items-start gap-4 border border-gray-100 shadow-sm">
+                                <div className="bg-yellow-50 p-4 rounded-full text-[#c89b3c] flex items-center justify-center">
+                                    <i className="fas fa-clock text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif">Office hours</h3>
+                                    <p className="text-gray-600 text-lg">Mon – Sat: 9am – 6pm</p>
+                                    <p className="text-gray-600 text-lg">Sunday: By appointment</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Contact Form Column */}
+                        <div className="bg-white rounded-3xl p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100">
+                            <h2 className="text-3xl font-bold text-gray-900 mb-8 font-serif">Send us a message</h2>
+
+                            {status === "success" && (
+                                <div className="bg-green-50 border border-green-200 text-green-700 p-4 rounded-xl mb-8 text-center">
+                                    Thank you for your message! We will get back to you shortly.
+                                </div>
+                            )}
+
+                            {status === "error" && (
+                                <div className="bg-red-50 border border-red-200 text-red-700 p-4 rounded-xl mb-8 text-center">
+                                    Something went wrong. Please try again later.
+                                </div>
+                            )}
+
+                            <form onSubmit={handleSubmit} className="space-y-6">
+                                <div>
+                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Full name</label>
                                     <input
                                         type="text"
                                         id="name"
+                                        placeholder="Your name"
                                         required
-                                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:border-[#00204a] transition-colors"
+                                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-4 text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors"
                                         value={formData.name}
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email</label>
                                     <input
                                         type="email"
                                         id="email"
+                                        placeholder="you@email.com"
                                         required
-                                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:border-[#00204a] transition-colors"
+                                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-4 text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors"
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                     />
                                 </div>
-                            </div>
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
                                     <input
                                         type="tel"
                                         id="phone"
+                                        placeholder="+94 ..."
                                         required
-                                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:border-[#00204a] transition-colors"
+                                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-4 text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors"
                                         value={formData.phone}
                                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-2">Preferred Date</label>
-                                    <input
-                                        type="date"
-                                        id="date"
-                                        required
-                                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:border-[#00204a] transition-colors"
-                                        value={formData.date}
-                                        onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                                    />
+                                    <label htmlFor="tour" className="block text-sm font-medium text-gray-700 mb-2">Interested in</label>
+                                    <div className="relative">
+                                        <select
+                                            id="tour"
+                                            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-4 text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors appearance-none"
+                                            value={formData.tour}
+                                            onChange={(e) => setFormData({ ...formData, tour: e.target.value })}
+                                        >
+                                            <option value="cultural">Cultural Heritage Tour</option>
+                                            <option value="wildlife">Wildlife Safari Adventure</option>
+                                            <option value="beach">Coastal Bliss & Relaxation</option>
+                                            <option value="custom">Custom Itinerary</option>
+                                        </select>
+                                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                                            <i className="fas fa-chevron-down text-sm"></i>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div>
-                                <label htmlFor="tour" className="block text-sm font-medium text-gray-700 mb-2">Select Tour Package</label>
-                                <select
-                                    id="tour"
-                                    className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:border-[#00204a] transition-colors"
-                                    value={formData.tour}
-                                    onChange={(e) => setFormData({ ...formData, tour: e.target.value })}
+                                <div>
+                                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Your message</label>
+                                    <textarea
+                                        id="message"
+                                        rows={4}
+                                        placeholder="Tell us about your dream trip..."
+                                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-4 text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors resize-none"
+                                        value={formData.message}
+                                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                    ></textarea>
+                                </div>
+                                <button
+                                    type="submit"
+                                    disabled={status === "submitting"}
+                                    className="w-full bg-[#c89b3c] text-white font-bold text-lg py-4 rounded-xl hover:bg-[#b38a35] transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
                                 >
-                                    <option value="cultural">Cultural Heritage Tour</option>
-                                    <option value="wildlife">Wildlife Safari Adventure</option>
-                                    <option value="beach">Coastal Bliss & Relaxation</option>
-                                    <option value="custom">Custom Itinerary</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Additional Requirements / Message</label>
-                                <textarea
-                                    id="message"
-                                    rows={4}
-                                    className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:border-[#00204a] transition-colors resize-none"
-                                    value={formData.message}
-                                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                ></textarea>
-                            </div>
-
-                            <button
-                                type="submit"
-                                disabled={status === "submitting"}
-                                className="w-full bg-[#00204a] text-white font-bold text-lg py-4 rounded-lg hover:bg-blue-900 transition-colors uppercase tracking-wider disabled:opacity-50"
-                            >
-                                {status === "submitting" ? "Submitting..." : "Submit Booking Request"}
-                            </button>
-                        </form>
+                                    {status === "submitting" ? "Sending..." : "Send message"}
+                                    <i className="fas fa-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
