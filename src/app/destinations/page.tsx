@@ -61,7 +61,7 @@ export default function Destinations() {
                         </div>
                         {/* Destination 2 */}
                         <div style={{ position: 'relative', height: '300px', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 5px 15px rgba(0,0,0,0.1)' }}>
-                            <Image src="/images/kandy.jpg" alt="Kandy" fill style={{ objectFit: 'cover' }} />
+                            <Image src="/images/dalada.webp" alt="Kandy" fill style={{ objectFit: 'cover' }} />
                             <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', padding: '20px', background: 'linear-gradient(transparent, rgba(0,0,0,0.8))' }}>
                                 <h3 style={{ color: '#fff', fontSize: '2.5rem', marginBottom: '5px' }}>Kandy</h3>
                                 <p style={{ color: '#ddd', fontSize: '1.4rem' }}>The Cultural Capital</p>
