@@ -66,7 +66,7 @@ export default function About() {
                                 Welcome Ceylon Tours is the #1 travel agency in Sri Lanka, dedicated to providing you with the most unforgettable experiences across our beautiful island. Based in Negombo, we have years of experience in crafting the perfect itineraries for our guests.
                             </p>
                             <p style={{ fontSize: '1.6rem', lineHeight: '1.8', color: '#666', marginBottom: '30px' }}>
-                                Whether you are looking for a relaxing beach holiday, an adventurous wildlife safari, or a cultural journey through ancient temples and palaces, we have the expertise to make your dream vacation a reality.
+                                Whether you are looking for a relaxing beach holiday, an adventurous wildlife safari, or a cultural journey through ancient temples and palaces, we have the expertise to make your dream vacation a reality. Having successfully covered over 500+ tours, we guarantee an exceptional and memorable experience.
                             </p>
                         </div>
                     </div>
