@@ -351,58 +351,58 @@ export default function Home() {
       {/* event home page section ends */}
 
       {/* Traditional Products section start */}
-      <section className="products py-20 bg-gray-50" id="products">
-        <h1 className="text-center text-5xl font-bold text-[#00204a] mb-16">Traditional Products</h1>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="products py-[5rem] bg-gray-50" id="products">
+        <h1 className="text-center text-[4rem] font-bold text-[#00204a] mb-[4rem]">Traditional Products</h1>
+        <div className="max-w-7xl mx-auto px-[2rem] sm:px-[3rem] lg:px-[4rem]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[3rem]">
             {/* Item 1 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <div className="relative h-64 w-full">
+            <div className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-[25rem] w-full">
                 <Image src="/images/mask.jpg" alt="Traditional Mask" fill style={{ objectFit: 'cover' }} />
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Traditional Mask</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">At a time when the people worshipped trees and animals, masks were an indispensable part of Sri Lankan rituals and ceremonies.</p>
+              <div className="p-[2.5rem]">
+                <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Traditional Mask</h3>
+                <p className="text-gray-600 text-[1.6rem] leading-relaxed normal-case">At a time when the people worshipped trees and animals, masks were an indispensable part of Sri Lankan rituals and ceremonies.</p>
               </div>
             </div>
             {/* Item 2 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <div className="relative h-64 w-full">
+            <div className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-[25rem] w-full">
                 <Image src="/images/spices.jpg" alt="Traditional Spices" fill style={{ objectFit: 'cover' }} />
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Traditional Spices</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">Herbs and spices have been a major influence on Eastern cuisine since times immemorial. Spices heighten the flavour and aroma of a dish.</p>
+              <div className="p-[2.5rem]">
+                <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Traditional Spices</h3>
+                <p className="text-gray-600 text-[1.6rem] leading-relaxed normal-case">Herbs and spices have been a major influence on Eastern cuisine since times immemorial. Spices heighten the flavour and aroma of a dish.</p>
               </div>
             </div>
             {/* Item 3 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <div className="relative h-64 w-full">
+            <div className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-[25rem] w-full">
                 <Image src="/images/food.jpg" alt="Traditional Foods" fill style={{ objectFit: 'cover' }} />
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Traditional Foods</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">Rice and curry is the Sri Lankan staple, though various kinds of bread, both roti style flatbreads and even loaves of bread.</p>
+              <div className="p-[2.5rem]">
+                <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Traditional Foods</h3>
+                <p className="text-gray-600 text-[1.6rem] leading-relaxed normal-case">Rice and curry is the Sri Lankan staple, though various kinds of bread, both roti style flatbreads and even loaves of bread.</p>
               </div>
             </div>
             {/* Item 4 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <div className="relative h-64 w-full">
+            <div className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-[25rem] w-full">
                 <Image src="/images/clothes.jpg" alt="Industrial Goods" fill style={{ objectFit: 'cover' }} />
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Industrial Goods</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">The land is home to a lot of resourceful industries that manufacture a wide range of product varieties.</p>
+              <div className="p-[2.5rem]">
+                <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Industrial Goods</h3>
+                <p className="text-gray-600 text-[1.6rem] leading-relaxed normal-case">The land is home to a lot of resourceful industries that manufacture a wide range of product varieties.</p>
               </div>
             </div>
             {/* Item 5 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <div className="relative h-64 w-full">
+            <div className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-[25rem] w-full">
                 <Image src="/images/art.jpg" alt="Arts And Crafts" fill style={{ objectFit: 'cover' }} />
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Arts And Crafts</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">Colour, creativity and commerce abound when it comes to arts and crafts in Sri Lanka. And Pottery is of Sri Lanka's oldest crafts.</p>
+              <div className="p-[2.5rem]">
+                <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Arts And Crafts</h3>
+                <p className="text-gray-600 text-[1.6rem] leading-relaxed normal-case">Colour, creativity and commerce abound when it comes to arts and crafts in Sri Lanka. And Pottery is of Sri Lanka's oldest crafts.</p>
               </div>
             </div>
           </div>
