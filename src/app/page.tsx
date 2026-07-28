@@ -350,91 +350,65 @@ export default function Home() {
       </section>
       {/* event home page section ends */}
 
-      {/* Tradional Products section start */}
-      <section className="products" id="products">
-        <h1 className="heading1">Tradional Products</h1>
-        <div className="wrapper">
-          <div className="item-bg"></div>
-          <div className="news-slider">
-            <div className="news-slider__wrp swiper-wrapper">
-              <div className="news-slider__item swiper-slide">
-                <a href="#mask" className="news__item">
-                  <div className="news__title">Traditional Mask</div>
-                  <p className="news__txt">At a time when the people worshipped trees and animals, masks were an indispensable part of Sri Lankan rituals and ceremonies.</p>
-                  <div className="news__img">
-                    <img src="/images/mask.jpg" alt="" />
-                  </div>
-                </a>
+      {/* Traditional Products section start */}
+      <section className="products py-20 bg-gray-50" id="products">
+        <h1 className="text-center text-5xl font-bold text-[#00204a] mb-16">Traditional Products</h1>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Item 1 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-64 w-full">
+                <Image src="/images/mask.jpg" alt="Traditional Mask" fill style={{ objectFit: 'cover' }} />
               </div>
-              <div className="news-slider__item swiper-slide">
-                <a href="#spices" className="news__item">
-                  <div className="news__title">Tradional Spices</div>
-                  <p className="news__txt">Herbs and spices have been a major influence on Eastern cuisine since times immemorial. Spices heighten the flavour and aroma of a dish.</p>
-                  <div className="news__img">
-                    <img src="/images/spices.jpg" alt="" />
-                  </div>
-                </a>
-              </div>
-              <div className="news-slider__item swiper-slide">
-                <a href="#food" className="news__item">
-                  <div className="news__title">Traditional Foods</div>
-                  <p className="news__txt">Rice and curry is the Sri Lankan staple, though various kinds of bread, both roti style flatbreads and even loaves of...</p>
-                  <div className="news__img">
-                    <img src="/images/food.jpg" alt="" />
-                  </div>
-                </a>
-              </div>
-              <div className="news-slider__item swiper-slide">
-                <a href="#goods" className="news__item">
-                  <div className="news__title">Industrial Goods</div>
-                  <p className="news__txt">The land is home to a lot of resourceful industries that manufacture a wide range of product varieties...</p>
-                  <div className="news__img">
-                    <img src="/images/clothes.jpg" alt="" />
-                  </div>
-                </a>
-              </div>
-              <div className="news-slider__item swiper-slide">
-                <a href="#art" className="news__item">
-                  <div className="news__title">Arts And Crafts</div>
-                  <p className="news__txt">Colour, creativity and commerce abound when it comes to arts and crafts in Sri Lanka. And Pottery is of Sri Lanka's oldest crafts.</p>
-                  <div className="news__img">
-                    <img src="/images/art.jpg" alt="" />
-                  </div>
-                </a>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Traditional Mask</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">At a time when the people worshipped trees and animals, masks were an indispensable part of Sri Lankan rituals and ceremonies.</p>
               </div>
             </div>
-            <div className="news-slider__ctr">
-              <div className="news-slider__arrows">
-                <button className="news-slider__arrow news-slider-prev">
-                  <span className="icon-font">
-                    <svg className="picon icon-arrow-left"><use xlinkHref="#icon-arrow-left"></use></svg>
-                  </span>
-                </button>
-                <button className="news-slider__arrow news-slider-next">
-                  <span className="icon-font">
-                    <svg className="picon icon-arrow-right"><use xlinkHref="#icon-arrow-right"></use></svg>
-                  </span>
-                </button>
+            {/* Item 2 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-64 w-full">
+                <Image src="/images/spices.jpg" alt="Traditional Spices" fill style={{ objectFit: 'cover' }} />
               </div>
-              <div className="news-slider__pagination"></div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Traditional Spices</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">Herbs and spices have been a major influence on Eastern cuisine since times immemorial. Spices heighten the flavour and aroma of a dish.</p>
+              </div>
+            </div>
+            {/* Item 3 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-64 w-full">
+                <Image src="/images/food.jpg" alt="Traditional Foods" fill style={{ objectFit: 'cover' }} />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Traditional Foods</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">Rice and curry is the Sri Lankan staple, though various kinds of bread, both roti style flatbreads and even loaves of bread.</p>
+              </div>
+            </div>
+            {/* Item 4 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-64 w-full">
+                <Image src="/images/clothes.jpg" alt="Industrial Goods" fill style={{ objectFit: 'cover' }} />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Industrial Goods</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">The land is home to a lot of resourceful industries that manufacture a wide range of product varieties.</p>
+              </div>
+            </div>
+            {/* Item 5 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-64 w-full">
+                <Image src="/images/art.jpg" alt="Arts And Crafts" fill style={{ objectFit: 'cover' }} />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Arts And Crafts</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">Colour, creativity and commerce abound when it comes to arts and crafts in Sri Lanka. And Pottery is of Sri Lanka's oldest crafts.</p>
+              </div>
             </div>
           </div>
         </div>
-
-        <svg style={{ display: 'none' }}>
-          <defs>
-            <symbol id="icon-arrow-left" viewBox="0 0 32 32">
-              <title>arrow-left</title>
-              <path d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z"></path>
-            </symbol>
-            <symbol id="icon-arrow-right" viewBox="0 0 32 32">
-              <title>arrow-right</title>
-              <path d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z"></path>
-            </symbol>
-          </defs>
-        </svg>
       </section>
-      {/* Tradional Products section end */}
+      {/* Traditional Products section end */}
 
       {/* reviews section starts */}
       <section className="reviews" id="reviews">
