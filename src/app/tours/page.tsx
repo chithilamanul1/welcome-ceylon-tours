@@ -4,31 +4,31 @@ import Footer from "../../components/Footer";
 
 export default function Tours() {
     return (
-        <>
+        <div className="bg-white text-black min-h-screen">
             {/* header section starts */}
-            <header className="header" style={{ background: 'black' }}>
-                <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px', fontFamily: "'Great Vibes', cursive", fontSize: "2.5rem", fontWeight: "normal" }}>
+            <header className="header" style={{ background: 'white', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
+                <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px', fontFamily: "'Great Vibes', cursive", fontSize: "2.5rem", fontWeight: "normal", color: 'black' }}>
                     <img src="/logo.png" alt="Welcome Ceylon Tours Logo" style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
                     Welcome Ceylon Tours
                 </Link>
 
                 <nav className="navbar">
-                    <div id="nav-close" className="fas fa-times"></div>
-                    <Link href="/">Home</Link>
-                    <Link href="/about">About</Link>
-                    <Link href="/tours">Tours</Link>
-                    <Link href="/destinations">Destinations</Link>
-                    <Link href="/book">Contact Us/Book Now</Link>
+                    <div id="nav-close" className="fas fa-times" style={{ color: 'black' }}></div>
+                    <Link href="/" style={{ color: 'black' }}>Home</Link>
+                    <Link href="/about" style={{ color: 'black' }}>About</Link>
+                    <Link href="/tours" style={{ color: 'black' }}>Tours</Link>
+                    <Link href="/destinations" style={{ color: 'black' }}>Destinations</Link>
+                    <Link href="/book" style={{ color: 'black' }}>Contact Us/Book Now</Link>
                 </nav>
 
                 <div className="icons">
-                    <div id="menu-btn" className="fas fa-bars"></div>
-                    <div id="search-btn" className="fas fa-search"></div>
+                    <div id="menu-btn" className="fas fa-bars" style={{ color: 'black' }}></div>
+                    <div id="search-btn" className="fas fa-search" style={{ color: 'black' }}></div>
                 </div>
             </header>
             {/* header section ends */}
 
-            <section style={{ paddingTop: '150px', paddingBottom: '50px', minHeight: '60vh' }}>
+            <section style={{ paddingTop: '150px', paddingBottom: '50px', minHeight: '60vh', backgroundColor: '#fff' }}>
                 <div className="heading-container" style={{ position: 'relative', textAlign: 'center', padding: '50px 0', marginBottom: '30px' }}>
                     <span style={{
                         position: 'absolute',
@@ -76,7 +76,7 @@ export default function Tours() {
                         {/* Tour 3 */}
                         <div style={{ background: '#fff', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 5px 15px rgba(0,0,0,0.1)' }}>
                             <div style={{ position: 'relative', height: '250px' }}>
-                                <Image src="/images/orkhanshots.jpg" alt="Wildlife Safari" fill style={{ objectFit: 'cover' }} />
+                                <Image src="/images/safa2.jpg" alt="Wildlife Safari" fill style={{ objectFit: 'cover' }} />
                             </div>
                             <div style={{ padding: '20px' }}>
                                 <h3 style={{ fontSize: '2rem', color: '#333', marginBottom: '10px' }}>Wildlife Safari</h3>
@@ -89,6 +89,6 @@ export default function Tours() {
             </section>
 
             <Footer />
-        </>
+        </div>
     );
 }
