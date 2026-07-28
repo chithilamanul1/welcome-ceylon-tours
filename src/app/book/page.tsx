@@ -36,35 +36,54 @@ export default function BookPage() {
     };
 
     return (
-        <>
+        <div className="bg-white text-black min-h-screen">
             {/* header section starts */}
-            <header className="header" style={{ background: 'black' }}>
-                <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px', fontFamily: "'Great Vibes', cursive", fontSize: "2.5rem", fontWeight: "normal" }}>
+            <header className="header" style={{ background: 'white', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
+                <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px', fontFamily: "'Great Vibes', cursive", fontSize: "2.5rem", fontWeight: "normal", color: 'black' }}>
                     <img src="/logo.png" alt="Welcome Ceylon Tours Logo" style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
                     Welcome Ceylon Tours
                 </Link>
 
                 <nav className="navbar">
-                    <div id="nav-close" className="fas fa-times"></div>
-                    <Link href="/">Home</Link>
-                    <Link href="/about">About</Link>
-                    <Link href="/tours">Tours</Link>
-                    <Link href="/destinations">Destinations</Link>
-                    <Link href="/book">Contact Us/Book Now</Link>
+                    <div id="nav-close" className="fas fa-times" style={{ color: 'black' }}></div>
+                    <Link href="/" style={{ color: 'black' }}>Home</Link>
+                    <Link href="/about" style={{ color: 'black' }}>About</Link>
+                    <Link href="/tours" style={{ color: 'black' }}>Tours</Link>
+                    <Link href="/destinations" style={{ color: 'black' }}>Destinations</Link>
+                    <Link href="/book" style={{ color: 'black' }}>Contact Us/Book Now</Link>
                 </nav>
 
                 <div className="icons">
-                    <div id="menu-btn" className="fas fa-bars"></div>
-                    <div id="search-btn" className="fas fa-search"></div>
+                    <div id="menu-btn" className="fas fa-bars" style={{ color: 'black' }}></div>
+                    <div id="search-btn" className="fas fa-search" style={{ color: 'black' }}></div>
                 </div>
             </header>
             {/* header section ends */}
 
-            <div className="min-h-screen pt-40 pb-12 bg-neutral-950">
+            <section style={{ paddingTop: '150px', paddingBottom: '50px', minHeight: '60vh', backgroundColor: '#fff' }}>
+                <div className="heading-container" style={{ position: 'relative', textAlign: 'center', padding: '50px 0', marginBottom: '30px' }}>
+                    <span style={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        fontSize: 'clamp(4rem, 10vw, 10rem)',
+                        color: 'rgba(0,0,0,0.03)',
+                        fontFamily: "'Great Vibes', cursive",
+                        zIndex: 0,
+                        whiteSpace: 'nowrap',
+                        userSelect: 'none'
+                    }}>
+                        Contact Us
+                    </span>
+                    <h1 style={{ position: 'relative', zIndex: 1, fontSize: 'clamp(2rem, 5vw, 4rem)', color: '#00204a', textTransform: 'uppercase', fontWeight: 'bold' }}>
+                        Book Your Tour
+                    </h1>
+                </div>
+
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="bg-neutral-900 rounded-2xl p-8 md:p-12 shadow-xl border border-white/10">
-                        <h1 className="text-3xl font-bold text-white mb-2 text-center uppercase tracking-wider">Book Your Tour</h1>
-                        <p className="text-gray-400 text-center mb-8">Fill out the form below and we will get back to you shortly.</p>
+                    <div className="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-lg border border-gray-200">
+                        <p className="text-gray-600 text-center mb-8 text-xl">Fill out the form below and we will get back to you shortly.</p>
 
                         {status === "success" && (
                             <div className="bg-green-500/20 border border-green-500 text-green-400 p-4 rounded-lg mb-8 text-center">
@@ -81,23 +100,23 @@ export default function BookPage() {
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
                                     <input
                                         type="text"
                                         id="name"
                                         required
-                                        className="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-yellow-400 transition-colors"
+                                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:border-[#00204a] transition-colors"
                                         value={formData.name}
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
                                     <input
                                         type="email"
                                         id="email"
                                         required
-                                        className="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-yellow-400 transition-colors"
+                                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:border-[#00204a] transition-colors"
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                     />
@@ -106,23 +125,23 @@ export default function BookPage() {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
+                                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
                                     <input
                                         type="tel"
                                         id="phone"
                                         required
-                                        className="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-yellow-400 transition-colors"
+                                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:border-[#00204a] transition-colors"
                                         value={formData.phone}
                                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="date" className="block text-sm font-medium text-gray-300 mb-2">Preferred Date</label>
+                                    <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-2">Preferred Date</label>
                                     <input
                                         type="date"
                                         id="date"
                                         required
-                                        className="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-yellow-400 transition-colors"
+                                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:border-[#00204a] transition-colors"
                                         value={formData.date}
                                         onChange={(e) => setFormData({ ...formData, date: e.target.value })}
                                     />
@@ -130,10 +149,10 @@ export default function BookPage() {
                             </div>
 
                             <div>
-                                <label htmlFor="tour" className="block text-sm font-medium text-gray-300 mb-2">Select Tour Package</label>
+                                <label htmlFor="tour" className="block text-sm font-medium text-gray-700 mb-2">Select Tour Package</label>
                                 <select
                                     id="tour"
-                                    className="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-yellow-400 transition-colors"
+                                    className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:border-[#00204a] transition-colors"
                                     value={formData.tour}
                                     onChange={(e) => setFormData({ ...formData, tour: e.target.value })}
                                 >
@@ -145,11 +164,11 @@ export default function BookPage() {
                             </div>
 
                             <div>
-                                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Additional Requirements / Message</label>
+                                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Additional Requirements / Message</label>
                                 <textarea
                                     id="message"
                                     rows={4}
-                                    className="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-yellow-400 transition-colors resize-none"
+                                    className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:border-[#00204a] transition-colors resize-none"
                                     value={formData.message}
                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                 ></textarea>
@@ -158,16 +177,16 @@ export default function BookPage() {
                             <button
                                 type="submit"
                                 disabled={status === "submitting"}
-                                className="w-full bg-yellow-400 text-black font-bold text-lg py-4 rounded-lg hover:bg-yellow-300 transition-colors uppercase tracking-wider disabled:opacity-50"
+                                className="w-full bg-[#00204a] text-white font-bold text-lg py-4 rounded-lg hover:bg-blue-900 transition-colors uppercase tracking-wider disabled:opacity-50"
                             >
                                 {status === "submitting" ? "Submitting..." : "Submit Booking Request"}
                             </button>
                         </form>
                     </div>
                 </div>
-            </div>
+            </section>
 
             <Footer />
-        </>
+        </div>
     );
 }

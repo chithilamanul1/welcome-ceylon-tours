@@ -32,7 +32,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #10221b;
+  background: #00204a;
 }
 
 section {
@@ -42,11 +42,11 @@ section {
 .hbtn {
   margin-top: 1rem;
   display: inline-block;
-  border: 0.2rem solid #10221b;
- /* background: #10221b;
+  border: 0.2rem solid #00204a;
+ /* background: #00204a;
   color: #fff;*/ 
   border-radius: 20px;
-  color: #10221b;
+  color: #00204a;
   cursor: pointer;
   background: none;
   font-size: 1.7rem;
@@ -56,7 +56,7 @@ section {
 }
 
 .hbtn:hover {
-  background: #10221b;
+  background: #00204a;
   color: #fff;
 }
 
@@ -65,11 +65,11 @@ section {
 .btn {
   margin-top: 1rem;
   display: inline-block;
-  border: 0.2rem solid #10221b;
- /* background: #10221b;
+  border: 0.2rem solid #00204a;
+ /* background: #00204a;
   color: #fff;*/ 
   border-radius: 20px;
-  color: #10221b;
+  color: #00204a;
   cursor: pointer;
   background: none;
   font-size: 1.7rem;
@@ -78,7 +78,7 @@ section {
 }
 
 .btn:hover {
-  background: #10221b;
+  background: #00204a;
   color: #fff;
 }
 
@@ -86,7 +86,7 @@ section {
   text-align: center;
   margin-bottom: 2.5rem;
   font-size: 4rem;
-  color: #10221b;
+  color: #00204a;
 }
 
 .header {
@@ -114,7 +114,7 @@ section {
   text-decoration: none;
   margin-right: auto;
   font-size: 2.5rem;
-  color: #10221b;
+  color: #00204a;
   font-weight: bolder;
 }
 
@@ -126,7 +126,7 @@ section {
   text-decoration: none;
   margin-left: 2rem;
   font-size: 1.7rem;
-  color: #10221b;
+  color: #00204a;
 }
 
 .header .navbar a:hover {
@@ -136,7 +136,7 @@ section {
 .header .navbar #nav-close {
   font-size: 5rem;
   cursor: pointer;
-  color: #10221b;
+  color: #00204a;
   display: none;
 }
 
@@ -145,7 +145,7 @@ section {
   font-size: 2.5rem;
   margin-left: 2rem;
   cursor: pointer;
-  color: #10221b;
+  color: #00204a;
 }
 
 .header .icons a:hover,
@@ -277,7 +277,7 @@ section {
 .home .box .content span {
   font-family: 'Bebas Neue', cursive;
   font-size: 60px;
-  color: #10221b;
+  color: #00204a;
 }
 
 .home .box .content h3 {
@@ -291,7 +291,7 @@ section {
 
 .home .box .content p {
   line-height: 2;
-  color: #10221b;
+  color: #00204a;
   font-size: 1.5rem;
   padding: 1rem 0;
 }
@@ -299,7 +299,7 @@ section {
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 3rem;
-  color: #10221b;
+  color: #00204a;
 }
 
 
@@ -359,7 +359,7 @@ section {
 
 .category .box-container .box p {
   font-size: 1.5rem;
-  color: #10221b;
+  color: #00204a;
   padding: 1rem 0;
   line-height: 2;
 }
@@ -492,7 +492,7 @@ padding: 183px e;
 
 .map .content p {
   font-size: 1.5rem;
-  color: #10221b;
+  color: #00204a;
   padding: 1rem 0;
   line-height: 2;
 }
@@ -538,7 +538,7 @@ padding: 183px e;
 }
 
 .blogs .slide .icons {
-  background: #10221b;
+  background: #00204a;
   border-radius: .5rem;
   padding: 1rem;
   position: relative;
@@ -563,14 +563,14 @@ padding: 183px e;
 
 .blogs .slide h3 {
   font-size: 2rem;
-  color: #10221b;
+  color: #00204a;
 }
 
 .blogs .slide p {
   font-size: 1.4rem;
   padding: 1rem 0;
   line-height: 2;
-  color: #10221b;
+  color: #00204a;
 }
 
 
@@ -1066,7 +1066,7 @@ a .news__item:hover {
   font-style: italic;
   background: #eee;
   border-radius: .5rem;
-  color: #10221b;
+  color: #00204a;
   line-height: 2;
   position: relative;
   z-index: 0;
@@ -1103,7 +1103,7 @@ a .news__item:hover {
 
 .reviews .slide .user h3 {
   font-size: 2rem;
-  color: #10221b;
+  color: #00204a;
 }
 
 .reviews .slide .user span {
@@ -1147,14 +1147,14 @@ a .news__item:hover {
 .newsletter .content p {
   font-size: 1.5rem;
   line-height: 2;
-  color: #10221b;
+  color: #00204a;
 }
 
 .newsletter .content form {
   margin-top: 2rem;
   background: #fff;
   border-radius: 5rem;
-  border: 0.2rem solid #10221b;
+  border: 0.2rem solid #00204a;
   padding: .7rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1166,20 +1166,20 @@ a .news__item:hover {
   background: none;
   text-transform: none;
   font-size: 1.6rem;
-  color: #10221b;
+  color: #00204a;
   padding: 0 1.3rem;
 }
 
 .newsletter .content form .btn {
   margin-top: 0;
   border-radius: 5rem;
-  background: #10221b;
+  background: #00204a;
   color: #fff;
 }
 
 .newsletter .content form .btn:hover {
   background: none;
-  color: #10221b;
+  color: #00204a;
 }
 
 .clients .silde {
