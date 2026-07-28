@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <>
       <div id="top"></div>
+      <h1 className="sr-only">Welcome Ceylon Tours - #1 Travel Agency in Sri Lanka</h1>
 
       {/* header section starts */}
       <header className="header">
@@ -135,7 +136,7 @@ export default function Home() {
 
       {/* category/services section starts */}
       <section className="category adventure" id="adventure">
-        <h1 className="heading">Our Services</h1>
+        <h2 className="heading">Our Services</h2>
         <div className="box-container">
           <div className="box">
             <img src="/images/rail image.jpg" alt="Tour Packages" />
@@ -175,7 +176,7 @@ export default function Home() {
 
       {/* blogs section starts */}
       <section className="blogs" id="blogs">
-        <h1 className="heading"> our daily posts </h1>
+        <h2 className="heading"> our daily posts </h2>
         <div className="swiper blogs-slider">
           <div className="swiper-wrapper">
             <div className="swiper-slide slide">
@@ -352,7 +353,7 @@ export default function Home() {
 
       {/* Traditional Products section start */}
       <section className="products py-[5rem] bg-gray-50" id="products">
-        <h1 className="text-center text-[4rem] font-bold text-[#00204a] mb-[4rem]">Traditional Products</h1>
+        <h2 className="text-center text-[4rem] font-bold text-[#00204a] mb-[4rem]">Traditional Products</h2>
         <div className="max-w-7xl mx-auto px-[2rem] sm:px-[3rem] lg:px-[4rem]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[3rem]">
             {/* Item 1 */}
@@ -412,7 +413,7 @@ export default function Home() {
 
       {/* reviews section starts */}
       <section className="reviews" id="reviews">
-        <h1 className="heading">Tourist's reviews</h1>
+        <h2 className="heading">Tourist's reviews</h2>
         <div className="swiper review-slider">
           <div className="swiper-wrapper">
             <div className="swiper-slide slide">
@@ -483,7 +484,7 @@ export default function Home() {
       {/* newsletter section */}
       <section className="newsletter">
         <div className="content">
-          <h1 className="heading">subscribe now</h1>
+          <h2 className="heading">subscribe now</h2>
           <p>Subscribe for our travel newsletter to receive exclusive deals, destination inspiration, and helpful tips for your next vacation. Stay informed and get the most out of your travels by subscribing to our email list today.</p>
           <form action="">
             <input type="email" name="" placeholder="enter your email" id="" className="email" />
