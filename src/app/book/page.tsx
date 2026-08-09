@@ -201,49 +201,6 @@ const COUNTRY_CODES = [
     { code: "+263", country: "Zimbabwe" },
 ];
 
-const fw: React.CSSProperties = { display: "flex", flexDirection: "column", gap: 8 };
-
-const lbl: React.CSSProperties = { fontSize: "1.3rem", fontWeight: 600, color: "#444" };
-
-const inp: React.CSSProperties = {
-    width: "100%",
-    background: "#f8f8f6",
-    border: "1px solid #e4e4e0",
-    borderRadius: 10,
-    padding: "1.2rem 1.4rem",
-    fontSize: "1.5rem",
-    color: "#1a1a1a",
-    outline: "none",
-    boxSizing: "border-box",
-    fontFamily: "inherit",
-};
-
-const submitBtn: React.CSSProperties = {
-    display: "inline-flex",
-    alignItems: "center",
-    background: "#1a1a1a",
-    color: "#fff",
-    border: "none",
-    borderRadius: 999,
-    padding: "1.2rem 2.4rem",
-    fontSize: "1.6rem",
-    fontWeight: 700,
-    cursor: "pointer",
-};
-
-const waBtn: React.CSSProperties = {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: 8,
-    background: "#25D366",
-    color: "#fff",
-    borderRadius: 999,
-    padding: "1.2rem 2.4rem",
-    fontSize: "1.5rem",
-    fontWeight: 600,
-    textDecoration: "none",
-};
-
 export default function BookPage() {
     const [form, setForm] = useState({ name: "", email: "", cc: "+44", wa: "", tour: "", travelers: "", date: "", message: "" });
     const [status, setStatus] = useState<"idle" | "sending" | "ok" | "err">("idle");
@@ -283,184 +240,259 @@ export default function BookPage() {
     };
 
     return (
-        <div style={{ background: "#f5f5f3", minHeight: "100vh", fontFamily: "'Inter', 'Segoe UI', sans-serif" }}>
+        <>
+            <style>{`
+        * { box-sizing: border-box; }
+        .book-page { background: #f5f5f3; min-height: 100vh; font-family: 'Inter','Segoe UI',sans-serif; }
 
-            {/* Navbar */}
-            <header style={{ background: "#fff", borderBottom: "1px solid #e8e8e4", position: "sticky", top: 0, zIndex: 100 }}>
-                <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 2.4rem", display: "flex", alignItems: "center", justifyContent: "space-between", height: 64 }}>
-                    <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
-                        <img src="/logo.png" alt="Welcome Ceylon Tours" style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover" }} />
-                        <span style={{ fontFamily: "'Great Vibes', cursive", fontSize: "2rem", color: "#1a1a1a" }}>Welcome Ceylon Tours</span>
-                    </Link>
-                    <nav style={{ display: "flex", gap: "2.4rem" }}>
-                        {([["Home", "/"], ["About", "/about"], ["Tours", "/tours"], ["Destinations", "/destinations"]] as [string, string][]).map(([l, h]) => (
-                            <Link key={l} href={h} style={{ fontSize: "1.4rem", color: "#555", textDecoration: "none", fontWeight: 500 }}>{l}</Link>
-                        ))}
-                    </nav>
-                </div>
-            </header>
+        /* ── Navbar ── */
+        .book-nav { background: #fff; border-bottom: 1px solid #e8e8e4; position: sticky; top: 0; z-index: 100; }
+        .book-nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .book-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .book-logo img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; }
+        .book-logo span { font-family: 'Great Vibes',cursive; font-size: 1.8rem; color: #1a1a1a; white-space: nowrap; }
+        .book-nav-links { display: flex; gap: 2rem; }
+        .book-nav-links a { font-size: 1.4rem; color: #555; text-decoration: none; font-weight: 500; }
 
-            <main style={{ maxWidth: 1200, margin: "0 auto", padding: "6rem 2.4rem 0" }}>
+        /* ── Main ── */
+        .book-main { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem 0; }
+        .book-eyebrow { font-size: 1.2rem; color: #888; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 500; margin-bottom: 1rem; }
 
-                {/* Hero label */}
-                <p style={{ fontSize: "1.3rem", color: "#888", letterSpacing: "0.07em", marginBottom: "1rem", textTransform: "uppercase", fontWeight: 500 }}>Plan Your Trip</p>
+        /* ── Headline ── */
+        .book-headline { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: 4rem; flex-wrap: wrap; }
+        .book-h1 { font-size: clamp(3.6rem,7vw,7rem); font-weight: 800; color: #1a1a1a; line-height: 1; margin: 0; letter-spacing: -0.02em; }
+        .book-subtitle { font-size: 1.5rem; color: #666; max-width: 320px; line-height: 1.6; text-align: right; }
 
-                {/* Headline row */}
-                <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: "2rem", marginBottom: "4rem" }}>
-                    <h1 style={{ fontSize: "clamp(4rem, 8vw, 7.2rem)", fontWeight: 800, color: "#1a1a1a", lineHeight: 1, margin: 0, letterSpacing: "-0.02em" }}>
-                        Contact Us
-                    </h1>
-                    <p style={{ fontSize: "1.6rem", color: "#666", maxWidth: 340, lineHeight: 1.6, textAlign: "right" }}>
-                        Tell us when and where you'd like to go and we'll confirm availability within 24 hours.
-                    </p>
-                </div>
+        /* ── Main grid ── */
+        .book-grid { display: grid; grid-template-columns: 1fr 300px; gap: 3rem; align-items: start; }
+        .book-side { position: sticky; top: 80px; }
+        .book-side-img { position: relative; border-radius: 20px; overflow: hidden; height: 520px; }
+        .book-side-badge { position: absolute; top: 14px; right: 14px; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); border-radius: 999px; padding: 5px 14px; font-size: 1.2rem; font-weight: 600; color: #1a1a1a; }
+        .book-side-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent,rgba(0,0,0,0.65)); padding: 3rem 2rem 2rem; color: #fff; }
+        .book-side-caption p { font-size: 1.4rem; line-height: 1.6; margin: 0; }
 
-                {/* Main grid */}
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 320px", gap: "3.2rem", alignItems: "start" }}>
+        /* ── Form card ── */
+        .book-form-card { background: #fff; border-radius: 20px; padding: 3rem; box-shadow: 0 2px 24px rgba(0,0,0,0.06); }
+        .book-alert-ok { background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; padding: 1.4rem 1.8rem; border-radius: 12px; margin-bottom: 2rem; font-size: 1.5rem; }
+        .book-alert-err { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 1.4rem 1.8rem; border-radius: 12px; margin-bottom: 2rem; font-size: 1.5rem; }
+        .book-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8rem; }
+        .book-field { display: flex; flex-direction: column; gap: 7px; }
+        .book-field-full { display: flex; flex-direction: column; gap: 7px; grid-column: 1 / -1; }
+        .book-label { font-size: 1.3rem; font-weight: 600; color: #444; }
+        .book-hint { font-size: 1.1rem; color: #888; font-weight: 400; margin-left: 5px; }
+        .book-input { width: 100%; background: #f8f8f6; border: 1px solid #e4e4e0; border-radius: 10px; padding: 1.2rem 1.4rem; font-size: 1.5rem; color: #1a1a1a; outline: none; font-family: inherit; transition: border-color 0.2s; }
+        .book-input:focus { border-color: #c89b3c; }
+        .book-wa-row { display: flex; gap: 8px; }
+        .book-cc { width: 200px; flex-shrink: 0; }
+        .book-wa-num { flex: 1; }
+        .book-select-wrap { position: relative; }
+        .book-select-wrap::after { content: "▾"; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #888; font-size: 1.2rem; }
+        .book-btn-row { grid-column: 1 / -1; display: flex; gap: 1.2rem; flex-wrap: wrap; align-items: center; }
+        .book-submit { display: inline-flex; align-items: center; background: #1a1a1a; color: #fff; border: none; border-radius: 999px; padding: 1.2rem 2.4rem; font-size: 1.6rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+        .book-submit:hover { background: #333; }
+        .book-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+        .book-submit-icon { background: #fff; color: #1a1a1a; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-left: 8px; }
+        .book-wa-btn { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; border-radius: 999px; padding: 1.2rem 2.4rem; font-size: 1.5rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+        .book-wa-btn:hover { background: #1ebe5e; }
 
-                    {/* Form card */}
-                    <div style={{ background: "#fff", borderRadius: 20, padding: "3.2rem", boxShadow: "0 2px 24px rgba(0,0,0,0.06)" }}>
-                        {status === "ok" && (
-                            <div style={{ background: "#f0fdf4", border: "1px solid #bbf7d0", color: "#166534", padding: "1.4rem 1.8rem", borderRadius: 12, marginBottom: "2.4rem", fontSize: "1.5rem" }}>
-                                ✓ Inquiry sent! We'll reach out on WhatsApp or Email within 24 hours.
-                            </div>
-                        )}
-                        {status === "err" && (
-                            <div style={{ background: "#fef2f2", border: "1px solid #fecaca", color: "#991b1b", padding: "1.4rem 1.8rem", borderRadius: 12, marginBottom: "2.4rem", fontSize: "1.5rem" }}>
-                                ✗ Something went wrong. Please try again or WhatsApp us directly.
-                            </div>
-                        )}
+        /* ── Contact strip ── */
+        .book-strip { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin: 5rem 0; text-align: center; }
+        .book-strip-card { padding: 2.8rem 1.6rem; background: #fff; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+        .book-strip-icon { font-size: 2.6rem; margin-bottom: 1rem; }
+        .book-strip-title { font-size: 1.6rem; font-weight: 700; color: #1a1a1a; margin-bottom: 0.6rem; }
+        .book-strip-line { font-size: 1.3rem; color: #666; margin: 0.2rem 0; }
 
-                        <form onSubmit={handleSubmit} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem" }}>
-                            {/* Name */}
-                            <div style={fw}>
-                                <label htmlFor="name" style={lbl}>Name <span style={{ color: "#e74c3c" }}>*</span></label>
-                                <input id="name" type="text" placeholder="Your full name" required style={inp} value={form.name} onChange={set("name")} />
-                            </div>
+        /* ── Bottom CTA ── */
+        .book-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; background: #fff; border-radius: 24px; overflow: hidden; margin-bottom: 6rem; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+        .book-cta-text { padding: 4rem; }
+        .book-cta-tag { background: #f0f0ec; border-radius: 999px; padding: 4px 14px; font-size: 1.2rem; color: #666; font-weight: 500; }
+        .book-cta-h2 { font-size: clamp(2.2rem,3.5vw,3.2rem); font-weight: 800; color: #1a1a1a; margin-top: 1.4rem; line-height: 1.2; }
+        .book-cta-p { font-size: 1.4rem; color: #666; line-height: 1.7; margin-top: 1rem; }
+        .book-cta-link { display: inline-block; margin-top: 2rem; background: #1a1a1a; color: #fff; padding: 1.2rem 2.4rem; border-radius: 999px; font-size: 1.5rem; font-weight: 600; text-decoration: none; }
+        .book-cta-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 2rem 2rem 2rem 0; }
+        .book-cta-img { border-radius: 16px; overflow: hidden; position: relative; height: 210px; }
 
-                            {/* Email */}
-                            <div style={fw}>
-                                <label htmlFor="email" style={lbl}>Email <span style={{ color: "#e74c3c" }}>*</span></label>
-                                <input id="email" type="email" placeholder="you@example.com" required style={inp} value={form.email} onChange={set("email")} />
-                            </div>
+        /* ── MOBILE RESPONSIVE ── */
+        @media (max-width: 768px) {
+          .book-nav-links { display: none; }
+          .book-main { padding: 3rem 1.6rem 0; }
+          .book-headline { flex-direction: column; align-items: flex-start; gap: 0.8rem; margin-bottom: 2.4rem; }
+          .book-subtitle { text-align: left; max-width: 100%; }
+          .book-grid { grid-template-columns: 1fr; }
+          .book-side { display: none; }
+          .book-form { grid-template-columns: 1fr; }
+          .book-field-full { grid-column: auto; }
+          .book-btn-row { grid-column: auto; flex-direction: column; }
+          .book-submit, .book-wa-btn { width: 100%; justify-content: center; }
+          .book-cc { width: 140px; }
+          .book-strip { grid-template-columns: 1fr; gap: 1.2rem; margin: 3rem 0; }
+          .book-cta { grid-template-columns: 1fr; }
+          .book-cta-imgs { display: none; }
+          .book-cta-text { padding: 2.8rem 2rem; }
+          .book-form-card { padding: 2rem 1.6rem; }
+        }
 
-                            {/* WhatsApp – full width */}
-                            <div style={{ ...fw, gridColumn: "1 / -1" }}>
-                                <label htmlFor="wa" style={lbl}>
-                                    WhatsApp Number <span style={{ color: "#e74c3c" }}>*</span>
-                                    <span style={{ fontWeight: 400, color: "#888", fontSize: "1.2rem", marginLeft: 6 }}>(we'll confirm your booking here)</span>
-                                </label>
-                                <div style={{ display: "flex", gap: 8 }}>
-                                    <select value={form.cc} onChange={set("cc")} style={{ ...inp, width: 210, flexShrink: 0 }}>
-                                        {COUNTRY_CODES.map((c) => (
-                                            <option key={`${c.code}-${c.country}`} value={c.code}>{c.code} — {c.country}</option>
-                                        ))}
-                                    </select>
-                                    <input id="wa" type="tel" placeholder="771234567" required style={{ ...inp, flex: 1 }} value={form.wa} onChange={set("wa")} />
-                                </div>
-                            </div>
+        @media (min-width: 769px) and (max-width: 1024px) {
+          .book-grid { grid-template-columns: 1fr 260px; }
+          .book-side-img { height: 420px; }
+          .book-cc { width: 160px; }
+          .book-strip { grid-template-columns: repeat(3,1fr); }
+        }
+      `}</style>
 
-                            {/* Tour */}
-                            <div style={fw}>
-                                <label htmlFor="tour" style={lbl}>Select Your Tour</label>
-                                <div style={{ position: "relative" }}>
-                                    <select id="tour" style={{ ...inp, appearance: "none", cursor: "pointer" }} value={form.tour} onChange={set("tour")}>
-                                        <option value="">Choose your tour…</option>
-                                        <option value="Cultural Heritage">Cultural Heritage Tour</option>
-                                        <option value="Wildlife Safari">Wildlife Safari Adventure</option>
-                                        <option value="Coastal Bliss">Coastal Bliss &amp; Relaxation</option>
-                                        <option value="Custom Itinerary">Custom Itinerary</option>
-                                    </select>
-                                    <span style={{ position: "absolute", right: 14, top: "50%", transform: "translateY(-50%)", pointerEvents: "none", color: "#888" }}>▾</span>
-                                </div>
-                            </div>
-
-                            {/* Travelers */}
-                            <div style={fw}>
-                                <label htmlFor="travelers" style={lbl}>Number of Travelers</label>
-                                <input id="travelers" type="text" placeholder="e.g. 2 adults, 1 child" style={inp} value={form.travelers} onChange={set("travelers")} />
-                            </div>
-
-                            {/* Date – full width */}
-                            <div style={{ ...fw, gridColumn: "1 / -1" }}>
-                                <label htmlFor="date" style={lbl}>Preferred Date</label>
-                                <input id="date" type="date" style={{ ...inp, width: "100%" }} value={form.date} onChange={set("date")} />
-                            </div>
-
-                            {/* Message – full width */}
-                            <div style={{ ...fw, gridColumn: "1 / -1" }}>
-                                <label htmlFor="message" style={lbl}>Message / Special Requests</label>
-                                <textarea id="message" rows={4} placeholder="Anything else we should know?" style={{ ...inp, resize: "vertical" }} value={form.message} onChange={set("message")} />
-                            </div>
-
-                            {/* Buttons – full width */}
-                            <div style={{ gridColumn: "1 / -1", display: "flex", gap: "1.2rem", flexWrap: "wrap" }}>
-                                <button type="submit" disabled={status === "sending"} style={submitBtn}>
-                                    {status === "sending" ? "Sending…" : "Reserve Your Spot"}
-                                    <span style={{ background: "#fff", color: "#1a1a1a", borderRadius: "50%", width: 28, height: 28, display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem", marginLeft: 8 }}>↗</span>
-                                </button>
-                                <a href="https://wa.me/94771234567?text=Hi%2C%20I%27d%20like%20to%20book%20a%20tour!" target="_blank" rel="noopener noreferrer" style={waBtn}>
-                                    <i className="fab fa-whatsapp" style={{ fontSize: "1.8rem" }}></i> Chat on WhatsApp
-                                </a>
-                            </div>
-                        </form>
-                    </div>
-
-                    {/* Side image */}
-                    <div style={{ position: "sticky", top: 80 }}>
-                        <div style={{ position: "relative", borderRadius: 20, overflow: "hidden", height: 520 }}>
-                            <Image src="/images/sigiriya12.webp" alt="Scenic Sri Lanka" fill style={{ objectFit: "cover" }} />
-                            <div style={{ position: "absolute", top: 14, right: 14, background: "rgba(255,255,255,0.92)", backdropFilter: "blur(8px)", borderRadius: 999, padding: "5px 14px", fontSize: "1.2rem", fontWeight: 600, color: "#1a1a1a" }}>
-                                Your Journey ✦
-                            </div>
-                            <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "linear-gradient(transparent, rgba(0,0,0,0.65))", padding: "3rem 2rem 2rem", color: "#fff" }}>
-                                <p style={{ fontSize: "1.4rem", lineHeight: 1.6, margin: 0 }}>Sri Lanka — the Pearl of the Indian Ocean, awaits you.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Contact strip */}
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2rem", margin: "5.6rem 0", textAlign: "center" }}>
-                    {[
-                        { icon: "📞", title: "Call & WhatsApp", lines: ["+94 77 123 4567"] },
-                        { icon: "🕐", title: "Working Hours", lines: ["Mon – Sat: 9am – 6pm", "Sunday: By Appointment"] },
-                        { icon: "✉️", title: "Write to Us", lines: ["info@welcomeceylontours.lk"] },
-                    ].map((item) => (
-                        <div key={item.title} style={{ padding: "3rem 2rem", background: "#fff", borderRadius: 16, boxShadow: "0 2px 12px rgba(0,0,0,0.04)" }}>
-                            <div style={{ fontSize: "2.8rem", marginBottom: "1rem" }}>{item.icon}</div>
-                            <h3 style={{ fontSize: "1.6rem", fontWeight: 700, color: "#1a1a1a", marginBottom: "0.8rem" }}>{item.title}</h3>
-                            {item.lines.map((l) => <p key={l} style={{ fontSize: "1.4rem", color: "#666", margin: "0.2rem 0" }}>{l}</p>)}
-                        </div>
-                    ))}
-                </div>
-
-                {/* Bottom CTA */}
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem", background: "#fff", borderRadius: 24, overflow: "hidden", marginBottom: "6rem", boxShadow: "0 2px 20px rgba(0,0,0,0.05)" }}>
-                    <div style={{ padding: "4.8rem" }}>
-                        <span style={{ background: "#f0f0ec", borderRadius: 999, padding: "4px 14px", fontSize: "1.2rem", color: "#666", fontWeight: 500 }}>Start now</span>
-                        <h2 style={{ fontSize: "clamp(2.4rem, 3.5vw, 3.4rem)", fontWeight: 800, color: "#1a1a1a", marginTop: "1.6rem", lineHeight: 1.2 }}>
-                            Discover your <em style={{ fontStyle: "italic" }}>next perfect</em> Sri Lanka escape
-                        </h2>
-                        <p style={{ fontSize: "1.5rem", color: "#666", lineHeight: 1.7, marginTop: "1.2rem" }}>
-                            Plan your trip in minutes and enjoy every moment of your Sri Lanka adventure.
-                        </p>
-                        <Link href="/tours" style={{ display: "inline-block", marginTop: "2.4rem", background: "#1a1a1a", color: "#fff", padding: "1.2rem 2.4rem", borderRadius: 999, fontSize: "1.5rem", fontWeight: 600, textDecoration: "none" }}>
-                            View Our Tours →
+            <div className="book-page">
+                {/* Navbar */}
+                <nav className="book-nav">
+                    <div className="book-nav-inner">
+                        <Link href="/" className="book-logo">
+                            <img src="/logo.png" alt="Welcome Ceylon Tours" />
+                            <span>Welcome Ceylon Tours</span>
                         </Link>
-                    </div>
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, padding: "2rem 2rem 2rem 0" }}>
-                        <div style={{ borderRadius: 16, overflow: "hidden", position: "relative", height: 220 }}>
-                            <Image src="/images/9arch2.jpg" alt="Nine Arch Bridge" fill style={{ objectFit: "cover" }} />
-                        </div>
-                        <div style={{ borderRadius: 16, overflow: "hidden", position: "relative", height: 220 }}>
-                            <Image src="/images/sigiriya2.jpg" alt="Sigiriya" fill style={{ objectFit: "cover" }} />
+                        <div className="book-nav-links">
+                            <Link href="/">Home</Link>
+                            <Link href="/about">About</Link>
+                            <Link href="/tours">Tours</Link>
+                            <Link href="/destinations">Destinations</Link>
                         </div>
                     </div>
-                </div>
-            </main>
+                </nav>
 
-            <Footer />
-        </div>
+                <main className="book-main">
+                    <p className="book-eyebrow">Plan Your Trip</p>
+
+                    <div className="book-headline">
+                        <h1 className="book-h1">Contact Us</h1>
+                        <p className="book-subtitle">Tell us when and where you'd like to go and we'll confirm availability within 24 hours.</p>
+                    </div>
+
+                    <div className="book-grid">
+                        {/* Form card */}
+                        <div className="book-form-card">
+                            {status === "ok" && <div className="book-alert-ok">✓ Inquiry sent! We'll reach out on WhatsApp or Email within 24 hours.</div>}
+                            {status === "err" && <div className="book-alert-err">✗ Something went wrong. Please WhatsApp us directly.</div>}
+
+                            <form onSubmit={handleSubmit} className="book-form">
+                                {/* Name */}
+                                <div className="book-field">
+                                    <label htmlFor="b-name" className="book-label">Name <span style={{ color: "#e74c3c" }}>*</span></label>
+                                    <input id="b-name" type="text" className="book-input" placeholder="Your full name" required value={form.name} onChange={set("name")} />
+                                </div>
+
+                                {/* Email */}
+                                <div className="book-field">
+                                    <label htmlFor="b-email" className="book-label">Email <span style={{ color: "#e74c3c" }}>*</span></label>
+                                    <input id="b-email" type="email" className="book-input" placeholder="you@example.com" required value={form.email} onChange={set("email")} />
+                                </div>
+
+                                {/* WhatsApp */}
+                                <div className="book-field-full">
+                                    <label htmlFor="b-wa" className="book-label">
+                                        WhatsApp Number <span style={{ color: "#e74c3c" }}>*</span>
+                                        <span className="book-hint">(we'll confirm your booking here)</span>
+                                    </label>
+                                    <div className="book-wa-row">
+                                        <select className="book-input book-cc" value={form.cc} onChange={set("cc")}>
+                                            {COUNTRY_CODES.map((c) => (
+                                                <option key={`${c.code}-${c.country}`} value={c.code}>{c.code} — {c.country}</option>
+                                            ))}
+                                        </select>
+                                        <input id="b-wa" type="tel" className="book-input book-wa-num" placeholder="771234567" required value={form.wa} onChange={set("wa")} />
+                                    </div>
+                                </div>
+
+                                {/* Tour */}
+                                <div className="book-field">
+                                    <label htmlFor="b-tour" className="book-label">Select Your Tour</label>
+                                    <div className="book-select-wrap">
+                                        <select id="b-tour" className="book-input" style={{ appearance: "none", width: "100%", cursor: "pointer" }} value={form.tour} onChange={set("tour")}>
+                                            <option value="">Choose your tour…</option>
+                                            <option value="Cultural Heritage">Cultural Heritage Tour</option>
+                                            <option value="Wildlife Safari">Wildlife Safari Adventure</option>
+                                            <option value="Coastal Bliss">Coastal Bliss &amp; Relaxation</option>
+                                            <option value="Custom Itinerary">Custom Itinerary</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                {/* Travelers */}
+                                <div className="book-field">
+                                    <label htmlFor="b-travelers" className="book-label">Number of Travelers</label>
+                                    <input id="b-travelers" type="text" className="book-input" placeholder="e.g. 2 adults, 1 child" value={form.travelers} onChange={set("travelers")} />
+                                </div>
+
+                                {/* Date */}
+                                <div className="book-field-full">
+                                    <label htmlFor="b-date" className="book-label">Preferred Date</label>
+                                    <input id="b-date" type="date" className="book-input" value={form.date} onChange={set("date")} />
+                                </div>
+
+                                {/* Message */}
+                                <div className="book-field-full">
+                                    <label htmlFor="b-msg" className="book-label">Message / Special Requests</label>
+                                    <textarea id="b-msg" rows={4} className="book-input" placeholder="Anything else we should know?" style={{ resize: "vertical" }} value={form.message} onChange={set("message")} />
+                                </div>
+
+                                {/* Buttons */}
+                                <div className="book-btn-row">
+                                    <button type="submit" className="book-submit" disabled={status === "sending"}>
+                                        {status === "sending" ? "Sending…" : "Reserve Your Spot"}
+                                        <span className="book-submit-icon">↗</span>
+                                    </button>
+                                    <a href="https://wa.me/94771234567?text=Hi%2C%20I%27d%20like%20to%20book%20a%20tour!" target="_blank" rel="noopener noreferrer" className="book-wa-btn">
+                                        <i className="fab fa-whatsapp" style={{ fontSize: "1.8rem" }}></i> Chat on WhatsApp
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+
+                        {/* Side image (hidden on mobile) */}
+                        <div className="book-side">
+                            <div className="book-side-img">
+                                <Image src="/images/sigiriya12.webp" alt="Scenic Sri Lanka" fill style={{ objectFit: "cover" }} />
+                                <div className="book-side-badge">Your Journey ✦</div>
+                                <div className="book-side-caption">
+                                    <p>Sri Lanka — the Pearl of the Indian Ocean, awaits you.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Contact strip */}
+                    <div className="book-strip">
+                        {[
+                            { icon: "📞", title: "Call & WhatsApp", lines: ["+94 77 123 4567"] },
+                            { icon: "🕐", title: "Working Hours", lines: ["Mon – Sat: 9am – 6pm", "Sunday: By Appointment"] },
+                            { icon: "✉️", title: "Write to Us", lines: ["info@welcomeceylontours.lk"] },
+                        ].map((item) => (
+                            <div key={item.title} className="book-strip-card">
+                                <div className="book-strip-icon">{item.icon}</div>
+                                <div className="book-strip-title">{item.title}</div>
+                                {item.lines.map((l) => <p key={l} className="book-strip-line">{l}</p>)}
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Bottom CTA */}
+                    <div className="book-cta">
+                        <div className="book-cta-text">
+                            <span className="book-cta-tag">Start now</span>
+                            <h2 className="book-cta-h2">Discover your <em style={{ fontStyle: "italic" }}>next perfect</em> Sri Lanka escape</h2>
+                            <p className="book-cta-p">Plan your trip in minutes and enjoy every moment of your Sri Lanka adventure.</p>
+                            <Link href="/tours" className="book-cta-link">View Our Tours →</Link>
+                        </div>
+                        <div className="book-cta-imgs">
+                            <div className="book-cta-img">
+                                <Image src="/images/9arch2.jpg" alt="Nine Arch Bridge" fill style={{ objectFit: "cover" }} />
+                            </div>
+                            <div className="book-cta-img">
+                                <Image src="/images/sigiriya2.jpg" alt="Sigiriya" fill style={{ objectFit: "cover" }} />
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+                <Footer />
+            </div>
+        </>
     );
 }
