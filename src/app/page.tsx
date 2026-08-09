@@ -138,31 +138,6 @@ export default function Home() {
       {/* home section ends */}
 
       {/* category/services section starts */}
-      <section className="category adventure" id="adventure">
-        <h2 className="heading">Our Services</h2>
-        <div className="box-container">
-          <div className="box">
-            <img src="/images/rail image.jpg" alt="Tour Packages" />
-            <h3>Tour Packages</h3>
-            <p>Explore the beauty of Sri Lanka with our carefully crafted tour packages tailored to your preferences...</p>
-            <a href="#tours" className="btn">read more</a>
-          </div>
-          <div className="box">
-            <img src="/images/colombo.jpg" alt="Airport Transfers" />
-            <h3>Airport Transfers</h3>
-            <p>Enjoy a hassle-free start to your vacation with our reliable and comfortable airport transfer services...</p>
-            <a href="#transfers" className="btn">read more</a>
-          </div>
-          <div className="box">
-            <img src="/images/safa2.jpg" alt="Safari Tours" />
-            <h3>Safari Tours</h3>
-            <p>Experience the thrill of the wild with our exciting safari tours in Sri Lanka's top national parks...</p>
-            <a href="#safari" className="btn">read more</a>
-          </div>
-        </div>
-      </section>
-      {/* category/services section ends */}
-
       {/* map section starts */}
       <section className="map" id="map">
         <div className="image">

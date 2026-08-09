@@ -4,11 +4,47 @@ import { useState } from "react";
 import Link from "next/link";
 import Footer from "../../components/Footer";
 
+const COUNTRY_CODES = [
+    { code: "+1", country: "US/CA" },
+    { code: "+44", country: "UK" },
+    { code: "+61", country: "AU" },
+    { code: "+64", country: "NZ" },
+    { code: "+91", country: "IN" },
+    { code: "+94", country: "LK" },
+    { code: "+49", country: "DE" },
+    { code: "+33", country: "FR" },
+    { code: "+39", country: "IT" },
+    { code: "+34", country: "ES" },
+    { code: "+31", country: "NL" },
+    { code: "+46", country: "SE" },
+    { code: "+47", country: "NO" },
+    { code: "+45", country: "DK" },
+    { code: "+41", country: "CH" },
+    { code: "+43", country: "AT" },
+    { code: "+32", country: "BE" },
+    { code: "+351", country: "PT" },
+    { code: "+7", country: "RU" },
+    { code: "+81", country: "JP" },
+    { code: "+82", country: "KR" },
+    { code: "+86", country: "CN" },
+    { code: "+65", country: "SG" },
+    { code: "+60", country: "MY" },
+    { code: "+66", country: "TH" },
+    { code: "+971", country: "UAE" },
+    { code: "+966", country: "SA" },
+    { code: "+974", country: "QA" },
+    { code: "+27", country: "ZA" },
+    { code: "+55", country: "BR" },
+    { code: "+52", country: "MX" },
+    { code: "+54", country: "AR" },
+];
+
 export default function BookPage() {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        phone: "",
+        countryCode: "+44",
+        whatsapp: "",
         tour: "cultural",
         date: "",
         message: "",
@@ -20,13 +56,22 @@ export default function BookPage() {
         setStatus("submitting");
 
         const subject = `New Booking Inquiry from ${formData.name}`;
-        const body = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nInterested In: ${formData.tour}\n\nMessage:\n${formData.message}`;
+        const body = `Name: ${formData.name}
+Email: ${formData.email}
+WhatsApp: ${formData.countryCode} ${formData.whatsapp}
+Interested In: ${formData.tour}
+${formData.date ? `Preferred Date: ${formData.date}` : ""}
+
+Message:
+${formData.message}`;
 
         window.location.href = `mailto:info@welcomeceylontours.lk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
         setStatus("success");
-        setFormData({ name: "", email: "", phone: "", tour: "cultural", date: "", message: "" });
+        setFormData({ name: "", email: "", countryCode: "+44", whatsapp: "", tour: "cultural", date: "", message: "" });
     };
+
+    const inputStyle = "w-full bg-gray-50 border border-gray-200 rounded-[1rem] px-[1.5rem] py-[1.5rem] text-[1.6rem] text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors";
 
     return (
         <div className="bg-white text-black min-h-screen">
@@ -53,7 +98,7 @@ export default function BookPage() {
             </header>
             {/* header section ends */}
 
-            <section style={{ paddingTop: '150px', paddingBottom: '50px', minHeight: '60vh', backgroundColor: '#fff' }}>
+            <section style={{ paddingTop: '150px', paddingBottom: '50px', minHeight: '80vh', backgroundColor: '#fff' }}>
                 <div className="heading-container" style={{ position: 'relative', textAlign: 'center', padding: '50px 0', marginBottom: '30px' }}>
                     <span style={{
                         position: 'absolute',
@@ -72,6 +117,9 @@ export default function BookPage() {
                     <h1 style={{ position: 'relative', zIndex: 1, fontSize: 'clamp(2rem, 5vw, 4rem)', color: '#00204a', textTransform: 'uppercase', fontWeight: 'bold' }}>
                         Book Your Tour
                     </h1>
+                    <p style={{ position: 'relative', zIndex: 1, fontSize: '1.8rem', color: '#666', marginTop: '1rem' }}>
+                        Fill in the form below and we will get back to you via WhatsApp or Email within 24 hours.
+                    </p>
                 </div>
 
                 <div className="max-w-[120rem] mx-auto px-[2rem] sm:px-[3rem] lg:px-[4rem] [&_*]:normal-case">
@@ -105,7 +153,7 @@ export default function BookPage() {
                                 </div>
                                 <div>
                                     <h3 className="text-[2rem] font-bold text-gray-900 mb-[1rem] font-serif">Email us</h3>
-                                    <p className="text-[1.6rem] text-gray-600 normal-case">info@welcomeceylontours.com</p>
+                                    <p className="text-[1.6rem] text-gray-600 normal-case">info@welcomeceylontours.lk</p>
                                 </div>
                             </div>
                             {/* Card 4 */}
@@ -119,15 +167,26 @@ export default function BookPage() {
                                     <p className="text-[1.6rem] text-gray-600">Sunday: By appointment</p>
                                 </div>
                             </div>
+                            {/* WhatsApp CTA */}
+                            <a
+                                href="https://wa.me/94771234567?text=Hi%2C%20I%20would%20like%20to%20book%20a%20tour%20with%20Welcome%20Ceylon%20Tours!"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center justify-center gap-[1rem] bg-[#25D366] text-white text-[1.8rem] font-bold py-[1.5rem] rounded-[1rem] hover:bg-[#1ebe5e] transition-colors"
+                            >
+                                <i className="fab fa-whatsapp text-[2.5rem]"></i>
+                                Chat on WhatsApp
+                            </a>
                         </div>
 
                         {/* Contact Form Column */}
                         <div className="bg-white rounded-[2rem] p-[3rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100">
-                            <h2 className="text-[3rem] font-bold text-gray-900 mb-[3rem] font-serif">Send us a message</h2>
+                            <h2 className="text-[3rem] font-bold text-gray-900 mb-[1rem] font-serif">Send us a message</h2>
+                            <p className="text-[1.5rem] text-gray-500 mb-[3rem]">We reply within 24 hours via WhatsApp or Email.</p>
 
                             {status === "success" && (
                                 <div className="bg-green-50 border border-green-200 text-green-700 p-[1.5rem] rounded-[1rem] mb-[3rem] text-center text-[1.6rem]">
-                                    Thank you for your message! We will get back to you shortly.
+                                    Thank you! Your message has been sent. We will contact you shortly.
                                 </div>
                             )}
 
@@ -138,48 +197,72 @@ export default function BookPage() {
                             )}
 
                             <form onSubmit={handleSubmit} className="space-y-[2rem]">
+                                {/* Full Name */}
                                 <div>
-                                    <label htmlFor="name" className="block text-[1.4rem] font-medium text-gray-700 mb-[1rem]">Full name</label>
+                                    <label htmlFor="name" className="block text-[1.4rem] font-medium text-gray-700 mb-[1rem]">Full name <span className="text-red-500">*</span></label>
                                     <input
                                         type="text"
                                         id="name"
                                         placeholder="Your name"
                                         required
-                                        className="w-full bg-gray-50 border border-gray-200 rounded-[1rem] px-[1.5rem] py-[1.5rem] text-[1.6rem] text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors"
+                                        className={inputStyle}
                                         value={formData.name}
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                     />
                                 </div>
+
+                                {/* Email */}
                                 <div>
-                                    <label htmlFor="email" className="block text-[1.4rem] font-medium text-gray-700 mb-[1rem]">Email</label>
+                                    <label htmlFor="email" className="block text-[1.4rem] font-medium text-gray-700 mb-[1rem]">Email <span className="text-red-500">*</span></label>
                                     <input
                                         type="email"
                                         id="email"
                                         placeholder="you@email.com"
                                         required
-                                        className="w-full bg-gray-50 border border-gray-200 rounded-[1rem] px-[1.5rem] py-[1.5rem] text-[1.6rem] text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors normal-case"
+                                        className={`${inputStyle} normal-case`}
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                     />
                                 </div>
+
+                                {/* WhatsApp with Country Code */}
                                 <div>
-                                    <label htmlFor="phone" className="block text-[1.4rem] font-medium text-gray-700 mb-[1rem]">Phone</label>
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        placeholder="+94 ..."
-                                        required
-                                        className="w-full bg-gray-50 border border-gray-200 rounded-[1rem] px-[1.5rem] py-[1.5rem] text-[1.6rem] text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors"
-                                        value={formData.phone}
-                                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                    />
+                                    <label htmlFor="whatsapp" className="block text-[1.4rem] font-medium text-gray-700 mb-[1rem]">
+                                        <i className="fab fa-whatsapp text-[#25D366] mr-[0.5rem]"></i>
+                                        WhatsApp Number <span className="text-red-500">*</span>
+                                    </label>
+                                    <div className="flex gap-[1rem]">
+                                        <select
+                                            id="countryCode"
+                                            className="bg-gray-50 border border-gray-200 rounded-[1rem] px-[1rem] py-[1.5rem] text-[1.6rem] text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors appearance-none cursor-pointer"
+                                            value={formData.countryCode}
+                                            onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
+                                            style={{ minWidth: '110px' }}
+                                        >
+                                            {COUNTRY_CODES.map((c) => (
+                                                <option key={c.code} value={c.code}>{c.code} {c.country}</option>
+                                            ))}
+                                        </select>
+                                        <input
+                                            type="tel"
+                                            id="whatsapp"
+                                            placeholder="771234567"
+                                            required
+                                            className={`${inputStyle} flex-1`}
+                                            value={formData.whatsapp}
+                                            onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
+                                        />
+                                    </div>
+                                    <p className="text-[1.2rem] text-gray-400 mt-[0.5rem]">We will reach out to you on WhatsApp to confirm your booking.</p>
                                 </div>
+
+                                {/* Interested In */}
                                 <div>
                                     <label htmlFor="tour" className="block text-[1.4rem] font-medium text-gray-700 mb-[1rem]">Interested in</label>
                                     <div className="relative">
                                         <select
                                             id="tour"
-                                            className="w-full bg-gray-50 border border-gray-200 rounded-[1rem] px-[1.5rem] py-[1.5rem] text-[1.6rem] text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors appearance-none"
+                                            className={`${inputStyle} appearance-none`}
                                             value={formData.tour}
                                             onChange={(e) => setFormData({ ...formData, tour: e.target.value })}
                                         >
@@ -193,17 +276,32 @@ export default function BookPage() {
                                         </div>
                                     </div>
                                 </div>
+
+                                {/* Preferred Date */}
+                                <div>
+                                    <label htmlFor="date" className="block text-[1.4rem] font-medium text-gray-700 mb-[1rem]">Preferred start date</label>
+                                    <input
+                                        type="date"
+                                        id="date"
+                                        className={inputStyle}
+                                        value={formData.date}
+                                        onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                                    />
+                                </div>
+
+                                {/* Message */}
                                 <div>
                                     <label htmlFor="message" className="block text-[1.4rem] font-medium text-gray-700 mb-[1rem]">Your message</label>
                                     <textarea
                                         id="message"
-                                        rows={4}
+                                        rows={3}
                                         placeholder="Tell us about your dream trip..."
-                                        className="w-full bg-gray-50 border border-gray-200 rounded-[1rem] px-[1.5rem] py-[1.5rem] text-[1.6rem] text-gray-900 focus:outline-none focus:border-[#c89b3c] focus:ring-1 focus:ring-[#c89b3c] transition-colors resize-none"
+                                        className={`${inputStyle} resize-none`}
                                         value={formData.message}
                                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                     ></textarea>
                                 </div>
+
                                 <button
                                     type="submit"
                                     disabled={status === "submitting"}
