@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "../../components/Footer";
@@ -202,42 +202,12 @@ const COUNTRY_CODES = [
 ];
 
 export default function BookPage() {
-    const [form, setForm] = useState({ name: "", email: "", cc: "+44", wa: "", tour: "", travelers: "", date: "", message: "" });
-    const [status, setStatus] = useState<"idle" | "sending" | "ok" | "err">("idle");
+    const [cc, setCc] = useState("+94");
+    const [sent, setSent] = useState(false);
 
-    const set = (key: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
-        setForm((p) => ({ ...p, [key]: e.target.value }));
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setStatus("sending");
-        try {
-            const res = await fetch("https://formsubmit.co/ajax/info@welcomeceylontours.lk", {
-                method: "POST",
-                headers: { "Content-Type": "application/json", Accept: "application/json" },
-                body: JSON.stringify({
-                    _subject: `New Booking Inquiry – ${form.name}`,
-                    _captcha: "false",
-                    Name: form.name,
-                    Email: form.email,
-                    WhatsApp: `${form.cc} ${form.wa}`,
-                    "Tour Interested In": form.tour || "Not specified",
-                    "Number of Travelers": form.travelers || "Not specified",
-                    "Preferred Date": form.date || "Not specified",
-                    Message: form.message || "—",
-                }),
-            });
-            const data = await res.json();
-            if (data.success === "true" || data.success === true) {
-                setStatus("ok");
-                setForm({ name: "", email: "", cc: "+44", wa: "", tour: "", travelers: "", date: "", message: "" });
-            } else {
-                setStatus("err");
-            }
-        } catch {
-            setStatus("err");
-        }
-    };
+    useEffect(() => {
+        if (window.location.search.includes("success=1")) setSent(true);
+    }, []);
 
     return (
         <>
@@ -245,7 +215,6 @@ export default function BookPage() {
         * { box-sizing: border-box; }
         .book-page { background: #f5f5f3; min-height: 100vh; font-family: 'Inter','Segoe UI',sans-serif; }
 
-        /* ── Navbar ── */
         .book-nav { background: #fff; border-bottom: 1px solid #e8e8e4; position: sticky; top: 0; z-index: 100; }
         .book-nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
         .book-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
@@ -254,16 +223,13 @@ export default function BookPage() {
         .book-nav-links { display: flex; gap: 2rem; }
         .book-nav-links a { font-size: 1.4rem; color: #555; text-decoration: none; font-weight: 500; }
 
-        /* ── Main ── */
         .book-main { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem 0; }
         .book-eyebrow { font-size: 1.2rem; color: #888; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 500; margin-bottom: 1rem; }
 
-        /* ── Headline ── */
         .book-headline { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: 4rem; flex-wrap: wrap; }
         .book-h1 { font-size: clamp(3.6rem,7vw,7rem); font-weight: 800; color: #1a1a1a; line-height: 1; margin: 0; letter-spacing: -0.02em; }
         .book-subtitle { font-size: 1.5rem; color: #666; max-width: 320px; line-height: 1.6; text-align: right; }
 
-        /* ── Main grid ── */
         .book-grid { display: grid; grid-template-columns: 1fr 300px; gap: 3rem; align-items: start; }
         .book-side { position: sticky; top: 80px; }
         .book-side-img { position: relative; border-radius: 20px; overflow: hidden; height: 520px; }
@@ -271,10 +237,8 @@ export default function BookPage() {
         .book-side-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent,rgba(0,0,0,0.65)); padding: 3rem 2rem 2rem; color: #fff; }
         .book-side-caption p { font-size: 1.4rem; line-height: 1.6; margin: 0; }
 
-        /* ── Form card ── */
         .book-form-card { background: #fff; border-radius: 20px; padding: 3rem; box-shadow: 0 2px 24px rgba(0,0,0,0.06); }
         .book-alert-ok { background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; padding: 1.4rem 1.8rem; border-radius: 12px; margin-bottom: 2rem; font-size: 1.5rem; }
-        .book-alert-err { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 1.4rem 1.8rem; border-radius: 12px; margin-bottom: 2rem; font-size: 1.5rem; }
         .book-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8rem; }
         .book-field { display: flex; flex-direction: column; gap: 7px; }
         .book-field-full { display: flex; flex-direction: column; gap: 7px; grid-column: 1 / -1; }
@@ -286,24 +250,21 @@ export default function BookPage() {
         .book-cc { width: 200px; flex-shrink: 0; }
         .book-wa-num { flex: 1; }
         .book-select-wrap { position: relative; }
-        .book-select-wrap::after { content: "▾"; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #888; font-size: 1.2rem; }
+        .book-select-wrap::after { content: "▾"; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #888; }
         .book-btn-row { grid-column: 1 / -1; display: flex; gap: 1.2rem; flex-wrap: wrap; align-items: center; }
-        .book-submit { display: inline-flex; align-items: center; background: #1a1a1a; color: #fff; border: none; border-radius: 999px; padding: 1.2rem 2.4rem; font-size: 1.6rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+        .book-submit { display: inline-flex; align-items: center; background: #1a1a1a; color: #fff; border: none; border-radius: 999px; padding: 1.2rem 2.4rem; font-size: 1.6rem; font-weight: 700; cursor: pointer; text-decoration: none; transition: background 0.2s; }
         .book-submit:hover { background: #333; }
-        .book-submit:disabled { opacity: 0.6; cursor: not-allowed; }
         .book-submit-icon { background: #fff; color: #1a1a1a; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-left: 8px; }
-        .book-wa-btn { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; border-radius: 999px; padding: 1.2rem 2.4rem; font-size: 1.5rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+        .book-wa-btn { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; border-radius: 999px; padding: 1.2rem 2.4rem; font-size: 1.5rem; font-weight: 600; text-decoration: none; }
         .book-wa-btn:hover { background: #1ebe5e; }
 
-        /* ── Contact strip ── */
         .book-strip { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin: 5rem 0; text-align: center; }
         .book-strip-card { padding: 2.8rem 1.6rem; background: #fff; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
         .book-strip-icon { font-size: 2.6rem; margin-bottom: 1rem; }
         .book-strip-title { font-size: 1.6rem; font-weight: 700; color: #1a1a1a; margin-bottom: 0.6rem; }
         .book-strip-line { font-size: 1.3rem; color: #666; margin: 0.2rem 0; }
 
-        /* ── Bottom CTA ── */
-        .book-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; background: #fff; border-radius: 24px; overflow: hidden; margin-bottom: 6rem; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+        .book-cta { display: grid; grid-template-columns: 1fr 1fr; background: #fff; border-radius: 24px; overflow: hidden; margin-bottom: 6rem; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
         .book-cta-text { padding: 4rem; }
         .book-cta-tag { background: #f0f0ec; border-radius: 999px; padding: 4px 14px; font-size: 1.2rem; color: #666; font-weight: 500; }
         .book-cta-h2 { font-size: clamp(2.2rem,3.5vw,3.2rem); font-weight: 800; color: #1a1a1a; margin-top: 1.4rem; line-height: 1.2; }
@@ -312,7 +273,6 @@ export default function BookPage() {
         .book-cta-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 2rem 2rem 2rem 0; }
         .book-cta-img { border-radius: 16px; overflow: hidden; position: relative; height: 210px; }
 
-        /* ── MOBILE RESPONSIVE ── */
         @media (max-width: 768px) {
           .book-nav-links { display: none; }
           .book-main { padding: 3rem 1.6rem 0; }
@@ -324,7 +284,7 @@ export default function BookPage() {
           .book-field-full { grid-column: auto; }
           .book-btn-row { grid-column: auto; flex-direction: column; }
           .book-submit, .book-wa-btn { width: 100%; justify-content: center; }
-          .book-cc { width: 140px; }
+          .book-cc { width: 130px; }
           .book-strip { grid-template-columns: 1fr; gap: 1.2rem; margin: 3rem 0; }
           .book-cta { grid-template-columns: 1fr; }
           .book-cta-imgs { display: none; }
@@ -333,15 +293,14 @@ export default function BookPage() {
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {
-          .book-grid { grid-template-columns: 1fr 260px; }
+          .book-grid { grid-template-columns: 1fr 250px; }
           .book-side-img { height: 420px; }
-          .book-cc { width: 160px; }
-          .book-strip { grid-template-columns: repeat(3,1fr); }
+          .book-cc { width: 155px; }
+          .book-form { grid-template-columns: 1fr 1fr; }
         }
       `}</style>
 
             <div className="book-page">
-                {/* Navbar */}
                 <nav className="book-nav">
                     <div className="book-nav-inner">
                         <Link href="/" className="book-logo">
@@ -359,52 +318,66 @@ export default function BookPage() {
 
                 <main className="book-main">
                     <p className="book-eyebrow">Plan Your Trip</p>
-
                     <div className="book-headline">
                         <h1 className="book-h1">Contact Us</h1>
-                        <p className="book-subtitle">Tell us when and where you'd like to go and we'll confirm availability within 24 hours.</p>
+                        <p className="book-subtitle">Tell us when and where you&apos;d like to go and we&apos;ll confirm availability within 24 hours.</p>
                     </div>
 
                     <div className="book-grid">
                         {/* Form card */}
                         <div className="book-form-card">
-                            {status === "ok" && <div className="book-alert-ok">✓ Inquiry sent! We'll reach out on WhatsApp or Email within 24 hours.</div>}
-                            {status === "err" && <div className="book-alert-err">✗ Something went wrong. Please WhatsApp us directly.</div>}
+                            {sent && (
+                                <div className="book-alert-ok">
+                                    ✓ Inquiry sent! We&apos;ll reach out on WhatsApp or Email within 24 hours.
+                                </div>
+                            )}
 
-                            <form onSubmit={handleSubmit} className="book-form">
-                                {/* Name */}
+                            {/* Plain HTML POST — no AJAX, no CORS issues */}
+                            <form
+                                action="https://formsubmit.co/info@welcomeceylontours.lk"
+                                method="POST"
+                                className="book-form"
+                            >
+                                <input type="hidden" name="_subject" value="New Booking Inquiry – Welcome Ceylon Tours" />
+                                <input type="hidden" name="_captcha" value="false" />
+                                <input type="hidden" name="_next" value="https://welcomeceylontours.lk/book?success=1" />
+                                <input type="hidden" name="_template" value="table" />
+
                                 <div className="book-field">
                                     <label htmlFor="b-name" className="book-label">Name <span style={{ color: "#e74c3c" }}>*</span></label>
-                                    <input id="b-name" type="text" className="book-input" placeholder="Your full name" required value={form.name} onChange={set("name")} />
+                                    <input id="b-name" name="Name" type="text" className="book-input" placeholder="Your full name" required />
                                 </div>
 
-                                {/* Email */}
                                 <div className="book-field">
                                     <label htmlFor="b-email" className="book-label">Email <span style={{ color: "#e74c3c" }}>*</span></label>
-                                    <input id="b-email" type="email" className="book-input" placeholder="you@example.com" required value={form.email} onChange={set("email")} />
+                                    <input id="b-email" name="Email" type="email" className="book-input" placeholder="you@example.com" required />
                                 </div>
 
-                                {/* WhatsApp */}
                                 <div className="book-field-full">
                                     <label htmlFor="b-wa" className="book-label">
                                         WhatsApp Number <span style={{ color: "#e74c3c" }}>*</span>
-                                        <span className="book-hint">(we'll confirm your booking here)</span>
+                                        <span className="book-hint">(we&apos;ll confirm your booking here)</span>
                                     </label>
                                     <div className="book-wa-row">
-                                        <select className="book-input book-cc" value={form.cc} onChange={set("cc")}>
+                                        <select
+                                            name="_cc_select"
+                                            className="book-input book-cc"
+                                            value={cc}
+                                            onChange={(e) => setCc(e.target.value)}
+                                        >
                                             {COUNTRY_CODES.map((c) => (
                                                 <option key={`${c.code}-${c.country}`} value={c.code}>{c.code} — {c.country}</option>
                                             ))}
                                         </select>
-                                        <input id="b-wa" type="tel" className="book-input book-wa-num" placeholder="771234567" required value={form.wa} onChange={set("wa")} />
+                                        <input id="b-wa" name="WhatsApp" type="tel" className="book-input book-wa-num" placeholder="771234567" required />
+                                        <input type="hidden" name="Country Code" value={cc} />
                                     </div>
                                 </div>
 
-                                {/* Tour */}
                                 <div className="book-field">
                                     <label htmlFor="b-tour" className="book-label">Select Your Tour</label>
                                     <div className="book-select-wrap">
-                                        <select id="b-tour" className="book-input" style={{ appearance: "none", width: "100%", cursor: "pointer" }} value={form.tour} onChange={set("tour")}>
+                                        <select id="b-tour" name="Tour Interested In" className="book-input" style={{ appearance: "none", width: "100%", cursor: "pointer" }}>
                                             <option value="">Choose your tour…</option>
                                             <option value="Cultural Heritage">Cultural Heritage Tour</option>
                                             <option value="Wildlife Safari">Wildlife Safari Adventure</option>
@@ -414,38 +387,39 @@ export default function BookPage() {
                                     </div>
                                 </div>
 
-                                {/* Travelers */}
                                 <div className="book-field">
                                     <label htmlFor="b-travelers" className="book-label">Number of Travelers</label>
-                                    <input id="b-travelers" type="text" className="book-input" placeholder="e.g. 2 adults, 1 child" value={form.travelers} onChange={set("travelers")} />
+                                    <input id="b-travelers" name="Number of Travelers" type="text" className="book-input" placeholder="e.g. 2 adults, 1 child" />
                                 </div>
 
-                                {/* Date */}
                                 <div className="book-field-full">
                                     <label htmlFor="b-date" className="book-label">Preferred Date</label>
-                                    <input id="b-date" type="date" className="book-input" value={form.date} onChange={set("date")} />
+                                    <input id="b-date" name="Preferred Date" type="date" className="book-input" />
                                 </div>
 
-                                {/* Message */}
                                 <div className="book-field-full">
                                     <label htmlFor="b-msg" className="book-label">Message / Special Requests</label>
-                                    <textarea id="b-msg" rows={4} className="book-input" placeholder="Anything else we should know?" style={{ resize: "vertical" }} value={form.message} onChange={set("message")} />
+                                    <textarea id="b-msg" name="Message" rows={4} className="book-input" placeholder="Anything else we should know?" style={{ resize: "vertical" }} />
                                 </div>
 
-                                {/* Buttons */}
                                 <div className="book-btn-row">
-                                    <button type="submit" className="book-submit" disabled={status === "sending"}>
-                                        {status === "sending" ? "Sending…" : "Reserve Your Spot"}
+                                    <button type="submit" className="book-submit">
+                                        Reserve Your Spot
                                         <span className="book-submit-icon">↗</span>
                                     </button>
-                                    <a href="https://wa.me/94771234567?text=Hi%2C%20I%27d%20like%20to%20book%20a%20tour!" target="_blank" rel="noopener noreferrer" className="book-wa-btn">
+                                    <a
+                                        href="https://wa.me/94771234567?text=Hi%2C%20I%27d%20like%20to%20book%20a%20tour!"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="book-wa-btn"
+                                    >
                                         <i className="fab fa-whatsapp" style={{ fontSize: "1.8rem" }}></i> Chat on WhatsApp
                                     </a>
                                 </div>
                             </form>
                         </div>
 
-                        {/* Side image (hidden on mobile) */}
+                        {/* Side image — hidden on mobile */}
                         <div className="book-side">
                             <div className="book-side-img">
                                 <Image src="/images/sigiriya12.webp" alt="Scenic Sri Lanka" fill style={{ objectFit: "cover" }} />

@@ -31,20 +31,26 @@ if (closeSearch && searchForm) {
 }
 
 window.onscroll = () => {
-    navbar.classList.remove('active');
+    if (navbar) navbar.classList.remove('active');
 
-    if (window.scrollY > 0) {
-        document.querySelector('.header').classList.add('active');
-    } else {
-        document.querySelector('.header').classList.remove('active');
+    var header = document.querySelector('.header');
+    if (header) {
+        if (window.scrollY > 0) {
+            header.classList.add('active');
+        } else {
+            header.classList.remove('active');
+        }
     }
 };
 
 window.onload = () => {
-    if (window.scrollY > 0) {
-        document.querySelector('.header').classList.add('active');
-    } else {
-        document.querySelector('.header').classList.remove('active');
+    var header = document.querySelector('.header');
+    if (header) {
+        if (window.scrollY > 0) {
+            header.classList.add('active');
+        } else {
+            header.classList.remove('active');
+        }
     }
 };
 
