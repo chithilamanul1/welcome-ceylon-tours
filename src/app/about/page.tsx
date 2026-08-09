@@ -1,6 +1,12 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "../../components/Footer";
+
+export const metadata: Metadata = {
+    title: "About Us | Welcome Ceylon Tours",
+    description: "Learn more about Welcome Ceylon Tours, your trusted partner in Sri Lanka. We are dedicated to providing you with the most unforgettable experiences across our beautiful island.",
+};
 
 export default function About() {
     return (

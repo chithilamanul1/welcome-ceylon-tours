@@ -18,21 +18,14 @@ export default function BookPage() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus("submitting");
-        try {
-            const res = await fetch("/api/bookings", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
-            });
-            if (res.ok) {
-                setStatus("success");
-                setFormData({ name: "", email: "", phone: "", tour: "cultural", date: "", message: "" });
-            } else {
-                setStatus("error");
-            }
-        } catch (error) {
-            setStatus("error");
-        }
+
+        const subject = `New Booking Inquiry from ${formData.name}`;
+        const body = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nInterested In: ${formData.tour}\n\nMessage:\n${formData.message}`;
+
+        window.location.href = `mailto:info@welcomeceylontours.lk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        setStatus("success");
+        setFormData({ name: "", email: "", phone: "", tour: "cultural", date: "", message: "" });
     };
 
     return (
@@ -81,7 +74,7 @@ export default function BookPage() {
                     </h1>
                 </div>
 
-                <div className="max-w-7xl mx-auto px-[2rem] sm:px-[3rem] lg:px-[4rem] normal-case">
+                <div className="max-w-[120rem] mx-auto px-[2rem] sm:px-[3rem] lg:px-[4rem] [&_*]:normal-case">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-[4rem]">
                         {/* Contact Details Column */}
                         <div className="space-y-[2rem]">

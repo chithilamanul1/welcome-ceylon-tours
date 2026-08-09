@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Footer() {
     return (
@@ -24,7 +27,13 @@ export default function Footer() {
 
             <div style={{ position: 'relative', zIndex: 1, maxWidth: '1200px', margin: '0 auto' }}>
                 {/* Call to Action */}
-                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                <motion.div
+                    style={{ textAlign: 'center', marginBottom: '60px' }}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
                     <h2 style={{ fontFamily: "'Great Vibes', cursive", fontSize: '3rem', marginBottom: '20px', color: '#fff' }}>
                         Let us take you on a tropical adventure!
                     </h2>
@@ -42,7 +51,7 @@ export default function Footer() {
                     }}>
                         INQUIRE NOW &gt;
                     </Link>
-                </div>
+                </motion.div>
 
                 {/* Footer Content */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '40px', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '40px' }}>
@@ -81,9 +90,9 @@ export default function Footer() {
                     {/* Column 3: Links 2 */}
                     <div style={{ flex: '1 1 150px' }}>
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                            <li style={{ marginBottom: '10px' }}><a href="#" style={{ color: '#fff', textDecoration: 'none', fontSize: '1.1rem', textTransform: 'uppercase' }}>Experiences</a></li>
-                            <li style={{ marginBottom: '10px' }}><a href="#" style={{ color: '#fff', textDecoration: 'none', fontSize: '1.1rem', textTransform: 'uppercase' }}>Ticketing & Visa</a></li>
-                            <li style={{ marginBottom: '10px' }}><a href="#" style={{ color: '#fff', textDecoration: 'none', fontSize: '1.1rem', textTransform: 'uppercase' }}>Island Weather</a></li>
+                            <li style={{ marginBottom: '10px' }}><Link href="/tours" style={{ color: '#fff', textDecoration: 'none', fontSize: '1.1rem', textTransform: 'uppercase' }}>Experiences</Link></li>
+                            <li style={{ marginBottom: '10px' }}><Link href="/destinations" style={{ color: '#fff', textDecoration: 'none', fontSize: '1.1rem', textTransform: 'uppercase' }}>Ticketing & Visa</Link></li>
+                            <li style={{ marginBottom: '10px' }}><Link href="/destinations" style={{ color: '#fff', textDecoration: 'none', fontSize: '1.1rem', textTransform: 'uppercase' }}>Island Weather</Link></li>
                         </ul>
                     </div>
 
@@ -98,8 +107,8 @@ export default function Footer() {
 
                         <h3 style={{ fontSize: '1.4rem', textTransform: 'uppercase', marginBottom: '15px' }}>Follow Us</h3>
                         <div style={{ display: 'flex', gap: '15px' }}>
-                            <a href="#" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '35px', height: '35px', borderRadius: '50%', border: '1px solid #fff', color: '#fff', textDecoration: 'none' }}><i className="fab fa-facebook-f"></i></a>
-                            <a href="#" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '35px', height: '35px', borderRadius: '50%', border: '1px solid #fff', color: '#fff', textDecoration: 'none' }}><i className="fab fa-instagram"></i></a>
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '35px', height: '35px', borderRadius: '50%', border: '1px solid #fff', color: '#fff', textDecoration: 'none' }}><i className="fab fa-facebook-f"></i></a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '35px', height: '35px', borderRadius: '50%', border: '1px solid #fff', color: '#fff', textDecoration: 'none' }}><i className="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>

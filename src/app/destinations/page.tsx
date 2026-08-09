@@ -1,6 +1,12 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "../../components/Footer";
+
+export const metadata: Metadata = {
+    title: "Destinations | Welcome Ceylon Tours",
+    description: "Discover the most beautiful destinations in Sri Lanka. From Sigiriya and Kandy to Mirissa and Yala National Park.",
+};
 
 export default function Destinations() {
     return (

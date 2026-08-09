@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -163,13 +166,13 @@ export default function Home() {
       {/* map section starts */}
       <section className="map" id="map">
         <div className="image">
-          <img src="/images/map2.2.jpg" className="center" alt="" />
+          <img src="/images/map2.2.jpg" className="center" alt="Map of Sri Lanka" />
         </div>
         <div className="content">
           <h3>Explore the island</h3>
           <p>Full of romantic landscapes, stirring mountains, lush green tea gardens and golden beaches, the island nation of Sri Lanka is nothing short of magnificent. The country has no shortage of beautiful awe-inspiring spots, natural, historic and cultural, each more picture-perfect than the next. From soulful Buddhist monasteries and temples to exotic and impeccable spots rarely explored, Sri Lanka offers everything that makes your escape a memorable one!.</p>
           <p>Whether traveling with your significant other or planning a vacay with your family, Sri Lanka won’t disappoint you!</p>
-          <a href="#map" className="btn">read more</a>
+          <Link href="/destinations" className="btn">read more</Link>
         </div>
       </section>
       {/* map section ends */}
@@ -180,64 +183,64 @@ export default function Home() {
         <div className="swiper blogs-slider">
           <div className="swiper-wrapper">
             <div className="swiper-slide slide">
-              <img src="/images/lotustower.jpg" alt="" />
+              <img src="/images/lotustower.jpg" alt="Lotus Tower" />
               <div className="icons">
                 <a href="#"> <i className="fas fa-calendar"></i> 25th Dec, 2022 </a>
                 <a href="#"> <i className="fas fa-user"></i> by admin </a>
               </div>
               <h3>Lotus Tower</h3>
               <p>Lotus Tower also referred to as Colombo Lotus Tower, is a 350 m (1,150 ft) tall tower...</p>
-              <a href="#lotus" className="btn">read more</a>
+              <Link href="/destinations" className="btn">read more</Link>
             </div>
             <div className="swiper-slide slide">
-              <img src="/images/gallefort.webp" alt="" />
+              <img src="/images/gallefort.webp" alt="Galle Fort" />
               <div className="icons">
                 <a href="#"> <i className="fas fa-calendar"></i> 25th Dec, 2022 </a>
                 <a href="#"> <i className="fas fa-user"></i> by admin </a>
               </div>
               <h3>Galle Fort</h3>
               <p>The Galle Fort, or Dutch Fort as it is also known, is a fortification first built by...</p>
-              <a href="#" className="btn">read more</a>
+              <Link href="/destinations" className="btn">read more</Link>
             </div>
             <div className="swiper-slide slide">
-              <img src="/images/dalada.webp" alt="" />
+              <img src="/images/dalada.webp" alt="Temple Of Tooth" />
               <div className="icons">
                 <a href="#"> <i className="fas fa-calendar"></i> 15th Jun, 2026 </a>
                 <a href="#"> <i className="fas fa-user"></i> by admin </a>
               </div>
               <h3>Temple Of Tooth</h3>
               <p>The Temple of the Sacred Tooth Relic or Sri Dalada Maligawa, is a Buddhist temple in Kandy, Sri Lanka.</p>
-              <a href="#" className="btn">read more</a>
+              <Link href="/destinations" className="btn">read more</Link>
             </div>
             <div className="swiper-slide slide">
-              <img src="/images/unawatuna.webp" alt="" />
+              <img src="/images/unawatuna.webp" alt="Unawatuna Beach" />
               <div className="icons">
                 <a href="#"> <i className="fas fa-calendar"></i> 15th Jun, 2026 </a>
                 <a href="#"> <i className="fas fa-user"></i> by admin </a>
               </div>
               <h3>Unawatuna Beach</h3>
               <p>Unawatuna is one of the biggest tourist destinations in Sri Lanka and is the most “famous” beach in the country..</p>
-              <a href="#" className="btn">read more</a>
+              <Link href="/destinations" className="btn">read more</Link>
             </div>
             <div className="swiper-slide slide">
-              <img src="/images/peradeniya.webp" alt="" />
+              <img src="/images/peradeniya.webp" alt="Peradeniya Botanical Garden" />
               <div className="icons">
                 <a href="#"> <i className="fas fa-calendar"></i> 15th Jun, 2026 </a>
                 <a href="#"> <i className="fas fa-user"></i> by admin </a>
               </div>
               <h3>Peradeniya Botanical Garden</h3>
               <p>Royal Botanic Gardens, Peradeniya are about 5.5 km to the west of the city of Kandy in the Central Province of Sri Lanka. </p>
-              <a href="#" className="btn">read more</a>
+              <Link href="/destinations" className="btn">read more</Link>
             </div>
             <div className="swiper-slide slide">
-              <img src="/images/gangarama.jpg" alt="" />
+              <img src="/images/gangarama.jpg" alt="Gangaramaya Temple" />
               <div className="icons">
                 <a href="#"> <i className="fas fa-calendar"></i> 15th Jun, 2026 </a>
                 <a href="#"> <i className="fas fa-user"></i> by admin </a>
               </div>
               <h3>Gangaramaya Temple</h3>
               <p>Gangaramaya Temple is one of the most well-known Buddhist temples in Colombo...</p>
-              <a href="#" className="btn">read more</a>
+              <Link href="/destinations" className="btn">read more</Link>
             </div>
           </div>
         </div>
@@ -267,7 +270,7 @@ export default function Home() {
                   <span className="author">Welcome Ceylon Tours</span>
                   <h1 className="title"><a href="#">Sri Pada Pilgrimage Season</a></h1>
                   <p className="text1">Though not the highest mountain of Sri Lanka, the striking pyramid of Adam's Peak (7,360 ft) is certainly the... </p>
-                  <a href="#sripada" className="Ebutton">Read more</a>
+                  <Link href="/destinations" className="Ebutton">Read more</Link>
                 </div>
               </div>
             </div>
@@ -292,7 +295,7 @@ export default function Home() {
                   <span className="author">Welcome Ceylon Tours</span>
                   <h1 className="title"><a href="#">Sinhala & Hindu New Year - 2027</a></h1>
                   <p className="text1">Sinhalese New Year, generally known as Aluth Avurudda in Sri Lanka, is a Sri Lankan holiday that celebrates the...</p>
-                  <a href="#awurudu" className="Ebutton">Read more</a>
+                  <Link href="/destinations" className="Ebutton">Read more</Link>
                 </div>
               </div>
             </div>
@@ -317,7 +320,7 @@ export default function Home() {
                   <span className="author">Welcome Ceylon Tours</span>
                   <h1 className="title"><a href="#">Asala Perahera - 2026</a></h1>
                   <p className="text1">The Kandy Esala Perahera (the Sri Dalada Perahara procession of Kandy) also known as The... </p>
-                  <a href="#asala" className="Ebutton">Read more</a>
+                  <Link href="/destinations" className="Ebutton">Read more</Link>
                 </div>
               </div>
             </div>
@@ -342,7 +345,7 @@ export default function Home() {
                   <span className="author">Welcome Ceylon Tours</span>
                   <h1 className="title"><a href="#">Vesak Festival</a></h1>
                   <p className="text1">Vesak is a religious and cultural festival in Sri Lanka. It is celebrated on the day of the full moon in the month of May...</p>
-                  <a href="#vesak" className="Ebutton">Read more</a>
+                  <Link href="/destinations" className="Ebutton">Read more</Link>
                 </div>
               </div>
             </div>
@@ -419,7 +422,7 @@ export default function Home() {
             <div className="swiper-slide slide">
               <p className="text">My family were based in Negombo for two weeks and Rukshan took us on a number of excursions including Sigiriya, Dambulla, Nuwara Eliya, Ella, Kandy and Galle. Rukshan is very friendly and an excellent tour guide who is flexible, experienced and knowledgeable about the key sites across Sri Lanka - I highly recommend him.</p>
               <div className="user">
-                <img src="/images/pic-1.png" alt="" />
+                <img src="/images/pic-1.png" alt="Samara Smith" />
                 <div className="info">
                   <h3>Samara Smith</h3>
                   <span>10 months ago</span>
@@ -429,7 +432,7 @@ export default function Home() {
             <div className="swiper-slide slide">
               <p className="text">I have been to Sri Lanka for 2 times now and I really love the country and the people there. We help some poor people there who are now close family! We travelled around the country with a great guide named Wicky.</p>
               <div className="user">
-                <img src="/images/pic-2.png" alt="" />
+                <img src="/images/pic-2.png" alt="Simona Alixa" />
                 <div className="info">
                   <h3>Simona Alixa</h3>
                   <span>New Zealand</span>
@@ -439,7 +442,7 @@ export default function Home() {
             <div className="swiper-slide slide">
               <p className="text">If you want to explore the must-see sights of Sri Lanka, but also enjoy your well-earned vacation from work, here are our suggestions on how to make the most of your days in the land of serendipity.</p>
               <div className="user">
-                <img src="/images/pic-3.png" alt="" />
+                <img src="/images/pic-3.png" alt="Petra Marick" />
                 <div className="info">
                   <h3>Petra Marick</h3>
                   <span>London</span>
@@ -449,7 +452,7 @@ export default function Home() {
             <div className="swiper-slide slide">
               <p className="text">Sri Lanka is known for its rich culture and history, with fascinating temples and tea plantations to explore. The country is home to amazing wildlife and exotic flora and fauna, and visitors can experience all of this in the beautiful national parks.</p>
               <div className="user">
-                <img src="/images/pic-4.png" alt="" />
+                <img src="/images/pic-4.png" alt="Chloe Loues" />
                 <div className="info">
                   <h3>Chloe Loues</h3>
                   <span>Korea</span>
@@ -459,7 +462,7 @@ export default function Home() {
             <div className="swiper-slide slide">
               <p className="text">Sri Lanka (historically known as Ceylon) has been called “the gem of the Indian ocean” because of its shape and location. Sri Jayewardenepura Kotte is its legislative capital, and Colombo is its largest city and centre of commerce.</p>
               <div className="user">
-                <img src="/images/pic-5.png" alt="" />
+                <img src="/images/pic-5.png" alt="john deo" />
                 <div className="info">
                   <h3>john deo</h3>
                   <span>USA</span>
@@ -469,7 +472,7 @@ export default function Home() {
             <div className="swiper-slide slide">
               <p className="text">Sri Lanka is a popular backpacker destination and known to be really cheap. We gathered a few tips for all the travelers who are really on a budget. </p>
               <div className="user">
-                <img src="/images/pic-6.png" alt="" />
+                <img src="/images/pic-6.png" alt="Jing lee" />
                 <div className="info">
                   <h3>Jing lee</h3>
                   <span>China</span>
