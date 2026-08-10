@@ -139,7 +139,14 @@ export default function Home() {
 
       {/* category/services section starts */}
       {/* map section starts */}
-      <section className="map" id="map">
+      <motion.section
+        className="map"
+        id="map"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="image">
           <img src="/images/map2.2.jpg" className="center" alt="Map of Sri Lanka" />
         </div>
@@ -149,11 +156,18 @@ export default function Home() {
           <p>Whether traveling with your significant other or planning a vacay with your family, Sri Lanka won’t disappoint you!</p>
           <Link href="/destinations" className="btn">read more</Link>
         </div>
-      </section>
+      </motion.section>
       {/* map section ends */}
 
       {/* blogs section starts */}
-      <section className="blogs" id="blogs">
+      <motion.section
+        className="blogs"
+        id="blogs"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <h2 className="heading"> our daily posts </h2>
         <div className="swiper blogs-slider">
           <div className="swiper-wrapper">
@@ -219,11 +233,18 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
       {/* blogs section ends */}
 
       {/* event home page section starts */}
-      <section className="event" id="events">
+      <motion.section
+        className="event"
+        id="events"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.1 }}
+      >
         <h1 className="heading1">Upcoming Events</h1>
         <div className="eventrow">
           <div className="example-2 card">
@@ -326,16 +347,34 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
       {/* event home page section ends */}
 
       {/* Traditional Products section start */}
       <section className="products py-[5rem] bg-gray-50" id="products">
         <h2 className="text-center text-[4rem] font-bold text-[#00204a] mb-[4rem]">Traditional Products</h2>
-        <div className="max-w-7xl mx-auto px-[2rem] sm:px-[3rem] lg:px-[4rem]">
+        <motion.div
+          className="max-w-7xl mx-auto px-[2rem] sm:px-[3rem] lg:px-[4rem]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.2 }
+            }
+          }}
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[3rem]">
             {/* Item 1 */}
-            <div className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <motion.div
+              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+              }}
+            >
               <div className="relative h-[25rem] w-full">
                 <Image src="/images/mask.jpg" alt="Traditional Mask" fill style={{ objectFit: 'cover' }} />
               </div>
@@ -343,9 +382,15 @@ export default function Home() {
                 <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Traditional Mask</h3>
                 <p className="text-gray-600 text-[1.6rem] leading-relaxed normal-case">At a time when the people worshipped trees and animals, masks were an indispensable part of Sri Lankan rituals and ceremonies.</p>
               </div>
-            </div>
+            </motion.div>
             {/* Item 2 */}
-            <div className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <motion.div
+              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+              }}
+            >
               <div className="relative h-[25rem] w-full">
                 <Image src="/images/spices.jpg" alt="Traditional Spices" fill style={{ objectFit: 'cover' }} />
               </div>
@@ -353,9 +398,15 @@ export default function Home() {
                 <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Traditional Spices</h3>
                 <p className="text-gray-600 text-[1.6rem] leading-relaxed normal-case">Herbs and spices have been a major influence on Eastern cuisine since times immemorial. Spices heighten the flavour and aroma of a dish.</p>
               </div>
-            </div>
+            </motion.div>
             {/* Item 3 */}
-            <div className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <motion.div
+              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+              }}
+            >
               <div className="relative h-[25rem] w-full">
                 <Image src="/images/food.jpg" alt="Traditional Foods" fill style={{ objectFit: 'cover' }} />
               </div>
@@ -363,9 +414,15 @@ export default function Home() {
                 <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Traditional Foods</h3>
                 <p className="text-gray-600 text-[1.6rem] leading-relaxed normal-case">Rice and curry is the Sri Lankan staple, though various kinds of bread, both roti style flatbreads and even loaves of bread.</p>
               </div>
-            </div>
+            </motion.div>
             {/* Item 4 */}
-            <div className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <motion.div
+              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+              }}
+            >
               <div className="relative h-[25rem] w-full">
                 <Image src="/images/clothes.jpg" alt="Industrial Goods" fill style={{ objectFit: 'cover' }} />
               </div>
@@ -373,9 +430,15 @@ export default function Home() {
                 <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Industrial Goods</h3>
                 <p className="text-gray-600 text-[1.6rem] leading-relaxed normal-case">The land is home to a lot of resourceful industries that manufacture a wide range of product varieties.</p>
               </div>
-            </div>
+            </motion.div>
             {/* Item 5 */}
-            <div className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <motion.div
+              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+              }}
+            >
               <div className="relative h-[25rem] w-full">
                 <Image src="/images/art.jpg" alt="Arts And Crafts" fill style={{ objectFit: 'cover' }} />
               </div>
@@ -383,14 +446,21 @@ export default function Home() {
                 <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Arts And Crafts</h3>
                 <p className="text-gray-600 text-[1.6rem] leading-relaxed normal-case">Colour, creativity and commerce abound when it comes to arts and crafts in Sri Lanka. And Pottery is of Sri Lanka's oldest crafts.</p>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
       {/* Traditional Products section end */}
 
       {/* reviews section starts */}
-      <section className="reviews" id="reviews">
+      <motion.section
+        className="reviews"
+        id="reviews"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <h2 className="heading">Tourist's reviews</h2>
         <div className="swiper review-slider">
           <div className="swiper-wrapper">
@@ -456,7 +526,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
       {/* reviews section ends */}
 
       {/* newsletter section */}
