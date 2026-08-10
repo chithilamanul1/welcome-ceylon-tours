@@ -366,85 +366,84 @@ export default function Home() {
             }
           }}
         >
-          <div className="flex flex-wrap justify-center gap-[3rem]">
-            {/* Item 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[250px]">
+            {/* Item 1 - Large (Spans 2 cols, 2 rows) */}
             <motion.div
-              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)]"
+              className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 md:col-span-2 md:row-span-2"
               variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                hidden: { opacity: 0, scale: 0.95 },
+                visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } }
               }}
             >
-              <div className="relative h-[25rem] w-full">
-                <Image src="/images/mask.jpg" alt="Traditional Mask" fill style={{ objectFit: 'cover' }} />
-              </div>
-              <div className="p-[2.5rem]">
-                <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Traditional Mask</h3>
-                <p className="text-gray-600 text-[1.6rem] leading-relaxed" style={{ textTransform: 'none' }}>At a time when the people worshipped trees and animals, masks were an indispensable part of Sri Lankan rituals and ceremonies.</p>
+              <Image src="/images/mask.jpg" alt="Traditional Mask" fill style={{ objectFit: 'cover' }} className="group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-3xl font-bold text-white mb-3">Traditional Mask</h3>
+                <p className="text-white/90 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100" style={{ textTransform: 'none' }}>At a time when the people worshipped trees and animals, masks were an indispensable part of Sri Lankan rituals and ceremonies.</p>
               </div>
             </motion.div>
-            {/* Item 2 */}
+
+            {/* Item 2 - Medium (Spans 1 col, 1 row) */}
             <motion.div
-              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)]"
+              className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 md:col-span-1 md:row-span-1"
               variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                hidden: { opacity: 0, scale: 0.95 },
+                visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } }
               }}
             >
-              <div className="relative h-[25rem] w-full">
-                <Image src="/images/spices.jpg" alt="Traditional Spices" fill style={{ objectFit: 'cover' }} />
-              </div>
-              <div className="p-[2.5rem]">
-                <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Traditional Spices</h3>
-                <p className="text-gray-600 text-[1.6rem] leading-relaxed" style={{ textTransform: 'none' }}>Herbs and spices have been a major influence on Eastern cuisine since times immemorial. Spices heighten the flavour and aroma of a dish.</p>
+              <Image src="/images/spices.jpg" alt="Traditional Spices" fill style={{ objectFit: 'cover' }} className="group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 p-6 w-full">
+                <h3 className="text-2xl font-bold text-white mb-2">Traditional Spices</h3>
+                <p className="text-white/90 text-sm line-clamp-2" style={{ textTransform: 'none' }}>Herbs and spices have been a major influence on Eastern cuisine since times immemorial.</p>
               </div>
             </motion.div>
-            {/* Item 3 */}
+
+            {/* Item 3 - Medium (Spans 1 col, 2 rows on large screens) */}
             <motion.div
-              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)]"
+              className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 md:col-span-1 lg:row-span-2"
               variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                hidden: { opacity: 0, scale: 0.95 },
+                visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } }
               }}
             >
-              <div className="relative h-[25rem] w-full">
-                <Image src="/images/food.jpg" alt="Traditional Foods" fill style={{ objectFit: 'cover' }} />
-              </div>
-              <div className="p-[2.5rem]">
-                <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Traditional Foods</h3>
-                <p className="text-gray-600 text-[1.6rem] leading-relaxed" style={{ textTransform: 'none' }}>Rice and curry is the Sri Lankan staple, though various kinds of bread, both roti style flatbreads and even loaves of bread.</p>
+              <Image src="/images/food.jpg" alt="Traditional Foods" fill style={{ objectFit: 'cover' }} className="group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 p-6 w-full">
+                <h3 className="text-2xl font-bold text-white mb-2">Traditional Foods</h3>
+                <p className="text-white/90 text-sm line-clamp-3" style={{ textTransform: 'none' }}>Rice and curry is the Sri Lankan staple, though various kinds of bread, both roti style flatbreads and even loaves of bread.</p>
               </div>
             </motion.div>
-            {/* Item 4 */}
+
+            {/* Item 4 - Wide (Spans 2 cols, 1 row) */}
             <motion.div
-              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)]"
+              className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 md:col-span-2 md:row-span-1"
               variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                hidden: { opacity: 0, scale: 0.95 },
+                visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } }
               }}
             >
-              <div className="relative h-[25rem] w-full">
-                <Image src="/images/clothes.jpg" alt="Industrial Goods" fill style={{ objectFit: 'cover' }} />
-              </div>
-              <div className="p-[2.5rem]">
-                <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Industrial Goods</h3>
-                <p className="text-gray-600 text-[1.6rem] leading-relaxed" style={{ textTransform: 'none' }}>The land is home to a lot of resourceful industries that manufacture a wide range of product varieties.</p>
+              <Image src="/images/clothes.jpg" alt="Industrial Goods" fill style={{ objectFit: 'cover' }} className="group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 p-6 w-full">
+                <h3 className="text-2xl font-bold text-white mb-2">Industrial Goods</h3>
+                <p className="text-white/90 text-sm line-clamp-2" style={{ textTransform: 'none' }}>The land is home to a lot of resourceful industries that manufacture a wide range of product varieties.</p>
               </div>
             </motion.div>
-            {/* Item 5 */}
+
+            {/* Item 5 - Medium (Spans 1 col, 1 row) */}
             <motion.div
-              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)]"
+              className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 md:col-span-1 md:row-span-1"
               variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                hidden: { opacity: 0, scale: 0.95 },
+                visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } }
               }}
             >
-              <div className="relative h-[25rem] w-full">
-                <Image src="/images/art.jpg" alt="Arts And Crafts" fill style={{ objectFit: 'cover' }} />
-              </div>
-              <div className="p-[2.5rem]">
-                <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Arts And Crafts</h3>
-                <p className="text-gray-600 text-[1.6rem] leading-relaxed" style={{ textTransform: 'none' }}>Colour, creativity and commerce abound when it comes to arts and crafts in Sri Lanka. And Pottery is of Sri Lanka's oldest crafts.</p>
+              <Image src="/images/art.jpg" alt="Arts And Crafts" fill style={{ objectFit: 'cover' }} className="group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 p-6 w-full">
+                <h3 className="text-2xl font-bold text-white mb-2">Arts And Crafts</h3>
+                <p className="text-white/90 text-sm line-clamp-2" style={{ textTransform: 'none' }}>Colour, creativity and commerce abound when it comes to arts and crafts in Sri Lanka.</p>
               </div>
             </motion.div>
           </div>
