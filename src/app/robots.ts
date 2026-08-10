@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/admin/',
         },
-        sitemap: 'https://welcomeceylontours.com/sitemap.xml',
+        sitemap: 'https://www.welcomeceylontours.lk/sitemap.xml',
     };
 }

@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://welcomeceylontours.com'),
+  metadataBase: new URL('https://www.welcomeceylontours.lk'),
   title: "Welcome Ceylon Tours | #1 Travel Agency in Sri Lanka",
   description: "Welcome Ceylon Tours is the premier travel agency in Sri Lanka, offering the best experiences across the island. Discover the wonders of Sri Lanka with Welcome Ceylon Tours, your trusted partner for unforgettable journeys.",
   keywords: [
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Welcome Ceylon Tours",
     description: "Welcome Ceylon Tours is the #1 travel agency in Sri Lanka, offering the best experiences across the island. Discover the wonders of Sri Lanka with Welcome Ceylon Tours, your trusted partner for unforgettable journeys.",
-    url: "https://welcomeceylontours.com",
+    url: "https://www.welcomeceylontours.lk",
     siteName: "Welcome Ceylon Tours",
     images: [
       {
