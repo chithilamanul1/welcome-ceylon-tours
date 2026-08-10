@@ -366,10 +366,10 @@ export default function Home() {
             }
           }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[3rem]">
+          <div className="flex flex-wrap justify-center gap-[3rem]">
             {/* Item 1 */}
             <motion.div
-              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)]"
               variants={{
                 hidden: { opacity: 0, y: 50 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
@@ -380,12 +380,12 @@ export default function Home() {
               </div>
               <div className="p-[2.5rem]">
                 <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Traditional Mask</h3>
-                <p className="text-gray-600 text-[1.6rem] leading-relaxed normal-case">At a time when the people worshipped trees and animals, masks were an indispensable part of Sri Lankan rituals and ceremonies.</p>
+                <p className="text-gray-600 text-[1.6rem] leading-relaxed" style={{ textTransform: 'none' }}>At a time when the people worshipped trees and animals, masks were an indispensable part of Sri Lankan rituals and ceremonies.</p>
               </div>
             </motion.div>
             {/* Item 2 */}
             <motion.div
-              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)]"
               variants={{
                 hidden: { opacity: 0, y: 50 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
@@ -396,12 +396,12 @@ export default function Home() {
               </div>
               <div className="p-[2.5rem]">
                 <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Traditional Spices</h3>
-                <p className="text-gray-600 text-[1.6rem] leading-relaxed normal-case">Herbs and spices have been a major influence on Eastern cuisine since times immemorial. Spices heighten the flavour and aroma of a dish.</p>
+                <p className="text-gray-600 text-[1.6rem] leading-relaxed" style={{ textTransform: 'none' }}>Herbs and spices have been a major influence on Eastern cuisine since times immemorial. Spices heighten the flavour and aroma of a dish.</p>
               </div>
             </motion.div>
             {/* Item 3 */}
             <motion.div
-              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)]"
               variants={{
                 hidden: { opacity: 0, y: 50 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
@@ -412,12 +412,12 @@ export default function Home() {
               </div>
               <div className="p-[2.5rem]">
                 <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Traditional Foods</h3>
-                <p className="text-gray-600 text-[1.6rem] leading-relaxed normal-case">Rice and curry is the Sri Lankan staple, though various kinds of bread, both roti style flatbreads and even loaves of bread.</p>
+                <p className="text-gray-600 text-[1.6rem] leading-relaxed" style={{ textTransform: 'none' }}>Rice and curry is the Sri Lankan staple, though various kinds of bread, both roti style flatbreads and even loaves of bread.</p>
               </div>
             </motion.div>
             {/* Item 4 */}
             <motion.div
-              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)]"
               variants={{
                 hidden: { opacity: 0, y: 50 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
@@ -428,12 +428,12 @@ export default function Home() {
               </div>
               <div className="p-[2.5rem]">
                 <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Industrial Goods</h3>
-                <p className="text-gray-600 text-[1.6rem] leading-relaxed normal-case">The land is home to a lot of resourceful industries that manufacture a wide range of product varieties.</p>
+                <p className="text-gray-600 text-[1.6rem] leading-relaxed" style={{ textTransform: 'none' }}>The land is home to a lot of resourceful industries that manufacture a wide range of product varieties.</p>
               </div>
             </motion.div>
             {/* Item 5 */}
             <motion.div
-              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-[1.5rem] overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)]"
               variants={{
                 hidden: { opacity: 0, y: 50 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
@@ -444,7 +444,7 @@ export default function Home() {
               </div>
               <div className="p-[2.5rem]">
                 <h3 className="text-[2.2rem] font-bold text-gray-900 mb-[1.5rem]">Arts And Crafts</h3>
-                <p className="text-gray-600 text-[1.6rem] leading-relaxed normal-case">Colour, creativity and commerce abound when it comes to arts and crafts in Sri Lanka. And Pottery is of Sri Lanka's oldest crafts.</p>
+                <p className="text-gray-600 text-[1.6rem] leading-relaxed" style={{ textTransform: 'none' }}>Colour, creativity and commerce abound when it comes to arts and crafts in Sri Lanka. And Pottery is of Sri Lanka's oldest crafts.</p>
               </div>
             </motion.div>
           </div>
