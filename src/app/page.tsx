@@ -377,9 +377,9 @@ export default function Home() {
             >
               <Image src="/images/mask.jpg" alt="Traditional Mask" fill style={{ objectFit: 'cover' }} className="group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute bottom-0 left-0 p-8 w-full transform translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-3xl font-bold text-white mb-3">Traditional Mask</h3>
-                <p className="text-white/90 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100" style={{ textTransform: 'none' }}>At a time when the people worshipped trees and animals, masks were an indispensable part of Sri Lankan rituals and ceremonies. Hand-carved from Kaduru wood and painted with vibrant natural colors, these masks are deeply rooted in folklore, healing rituals (Thovil), and traditional dance performances (Kolam). Each mask tells a unique story of demons, deities, and ancient myths.</p>
+              <div className="absolute bottom-0 left-0 p-8 w-full">
+                <h3 className="text-[3rem] font-bold text-white mb-3">Traditional Mask</h3>
+                <p className="text-white/90 text-[1.6rem] leading-relaxed line-clamp-4 group-hover:line-clamp-none transition-all duration-500" style={{ textTransform: 'none' }}>At a time when the people worshipped trees and animals, masks were an indispensable part of Sri Lankan rituals and ceremonies. Hand-carved from Kaduru wood and painted with vibrant natural colors, these masks are deeply rooted in folklore, healing rituals (Thovil), and traditional dance performances (Kolam). Each mask tells a unique story of demons, deities, and ancient myths.</p>
               </div>
             </motion.div>
 
@@ -393,9 +393,9 @@ export default function Home() {
             >
               <Image src="/images/spices.jpg" alt="Traditional Spices" fill style={{ objectFit: 'cover' }} className="group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-2xl font-bold text-white mb-2">Traditional Spices</h3>
-                <p className="text-white/90 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100" style={{ textTransform: 'none' }}>Herbs and spices have been a major influence on Eastern cuisine since times immemorial. Sri Lanka, historically known as the Spice Island, is world-renowned for its authentic Ceylon Cinnamon, cardamom, cloves, and black pepper. These aromatic spices not only heighten the flavor of our dishes but also offer incredible Ayurvedic health benefits.</p>
+              <div className="absolute bottom-0 left-0 p-6 w-full">
+                <h3 className="text-[2.2rem] font-bold text-white mb-2">Traditional Spices</h3>
+                <p className="text-white/90 text-[1.4rem] line-clamp-3 group-hover:line-clamp-none transition-all duration-500" style={{ textTransform: 'none' }}>Herbs and spices have been a major influence on Eastern cuisine since times immemorial. Sri Lanka, historically known as the Spice Island, is world-renowned for its authentic Ceylon Cinnamon, cardamom, cloves, and black pepper. These aromatic spices not only heighten the flavor of our dishes but also offer incredible Ayurvedic health benefits.</p>
               </div>
             </motion.div>
 
@@ -409,9 +409,9 @@ export default function Home() {
             >
               <Image src="/images/food.jpg" alt="Traditional Foods" fill style={{ objectFit: 'cover' }} className="group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-2xl font-bold text-white mb-2">Traditional Foods</h3>
-                <p className="text-white/90 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100" style={{ textTransform: 'none' }}>Rice and curry is the Sri Lankan staple, accompanied by an array of flavorful side dishes, sambols, and mallums. Beyond the daily staple, our culinary heritage includes unique delicacies like hoppers (appa), string hoppers (idiyappam), kottu roti, and sweet treats like kavum and kokis, all bursting with rich coconut and spice flavors.</p>
+              <div className="absolute bottom-0 left-0 p-6 w-full">
+                <h3 className="text-[2.2rem] font-bold text-white mb-2">Traditional Foods</h3>
+                <p className="text-white/90 text-[1.4rem] line-clamp-4 group-hover:line-clamp-none transition-all duration-500" style={{ textTransform: 'none' }}>Rice and curry is the Sri Lankan staple, accompanied by an array of flavorful side dishes, sambols, and mallums. Beyond the daily staple, our culinary heritage includes unique delicacies like hoppers (appa), string hoppers (idiyappam), kottu roti, and sweet treats like kavum and kokis, all bursting with rich coconut and spice flavors.</p>
               </div>
             </motion.div>
 
@@ -425,9 +425,9 @@ export default function Home() {
             >
               <Image src="/images/clothes.jpg" alt="Industrial Goods" fill style={{ objectFit: 'cover' }} className="group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-12 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-2xl font-bold text-white mb-2">Industrial Goods</h3>
-                <p className="text-white/90 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100" style={{ textTransform: 'none' }}>The land is home to a lot of resourceful industries that manufacture a wide range of product varieties. From world-class apparel manufacturing to the production of high-quality rubber goods, gems, and Ceylon tea, Sri Lanka's industrial sector combines skilled craftsmanship with modern technology to deliver premium products to the global market.</p>
+              <div className="absolute bottom-0 left-0 p-6 w-full">
+                <h3 className="text-[2.2rem] font-bold text-white mb-2">Industrial Goods</h3>
+                <p className="text-white/90 text-[1.4rem] line-clamp-3 group-hover:line-clamp-none transition-all duration-500" style={{ textTransform: 'none' }}>The land is home to a lot of resourceful industries that manufacture a wide range of product varieties. From world-class apparel manufacturing to the production of high-quality rubber goods, gems, and Ceylon tea, Sri Lanka's industrial sector combines skilled craftsmanship with modern technology to deliver premium products to the global market.</p>
               </div>
             </motion.div>
 
@@ -441,9 +441,9 @@ export default function Home() {
             >
               <Image src="/images/art.jpg" alt="Arts And Crafts" fill style={{ objectFit: 'cover' }} className="group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-2xl font-bold text-white mb-2">Arts And Crafts</h3>
-                <p className="text-white/90 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100" style={{ textTransform: 'none' }}>Colour, creativity and commerce abound when it comes to arts and crafts in Sri Lanka. Our artisans excel in traditional pottery, intricate wood carving, delicate Beeralu lace making, and vibrant Batik textiles. These timeless crafts are passed down through generations, reflecting the island's rich cultural heritage and artistic soul.</p>
+              <div className="absolute bottom-0 left-0 p-6 w-full">
+                <h3 className="text-[2.2rem] font-bold text-white mb-2">Arts And Crafts</h3>
+                <p className="text-white/90 text-[1.4rem] line-clamp-3 group-hover:line-clamp-none transition-all duration-500" style={{ textTransform: 'none' }}>Colour, creativity and commerce abound when it comes to arts and crafts in Sri Lanka. Our artisans excel in traditional pottery, intricate wood carving, delicate Beeralu lace making, and vibrant Batik textiles. These timeless crafts are passed down through generations, reflecting the island's rich cultural heritage and artistic soul.</p>
               </div>
             </motion.div>
           </div>
