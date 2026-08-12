@@ -1,6 +1,21 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Bebas_Neue, Great_Vibes } from "next/font/google";
 import "./globals.css";
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-bebas-neue",
+});
+
+const greatVibes = Great_Vibes({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-great-vibes",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.welcomeceylontours.lk'),
@@ -56,9 +71,6 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
         <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="/css/style.css" />
         {/* Meta Pixel Code */}
         <Script id="facebook-pixel" strategy="afterInteractive">
@@ -79,10 +91,10 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body>
+      <body className={`${bebasNeue.variable} ${greatVibes.variable}`}>
         {children}
-        <Script src="https://code.jquery.com/jquery-3.6.0.min.js" strategy="beforeInteractive" />
-        <Script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" strategy="beforeInteractive" />
+        <Script src="https://code.jquery.com/jquery-3.6.0.min.js" strategy="lazyOnload" />
+        <Script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" strategy="lazyOnload" />
         <Script src="/js/script.js" strategy="lazyOnload" />
         <noscript>
           <img height="1" width="1" style={{ display: "none" }} src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" alt="" />

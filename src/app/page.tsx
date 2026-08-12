@@ -13,8 +13,8 @@ export default function Home() {
 
       {/* header section starts */}
       <header className="header">
-        <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px', fontFamily: "'Great Vibes', cursive", fontSize: "2.5rem", fontWeight: "normal" }}>
-          <img src="/logo.png" alt="Welcome Ceylon Tours Logo" style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
+        <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px', fontFamily: "var(--font-great-vibes), cursive", fontSize: "2.5rem", fontWeight: "normal" }}>
+          <Image src="/logo.png" alt="Welcome Ceylon Tours Logo" width={50} height={50} style={{ borderRadius: '50%' }} />
           Welcome Ceylon Tours
         </Link>
 
@@ -38,7 +38,7 @@ export default function Home() {
       <div className="search-form">
         <div id="close-search" className="fas fa-times"></div>
         <form action="">
-          <input type="search" name="" placeholder="search here..." id="search-box" />
+          <input type="search" name="" placeholder="search here..." id="search-box" aria-label="Search" />
           <label htmlFor="search-box" className="fas fa-search"></label>
         </form>
       </div>
@@ -148,7 +148,7 @@ export default function Home() {
         viewport={{ once: true, amount: 0.2 }}
       >
         <div className="image">
-          <img src="/images/map2.2.jpg" className="center" alt="Map of Sri Lanka" />
+          <Image src="/images/map2.2.jpg" className="center" alt="Map of Sri Lanka" width={800} height={600} style={{ width: '100%', height: 'auto' }} />
         </div>
         <div className="content">
           <h3>Explore the island</h3>
@@ -172,7 +172,7 @@ export default function Home() {
         <div className="swiper blogs-slider">
           <div className="swiper-wrapper">
             <div className="swiper-slide slide">
-              <img src="/images/lotustower.jpg" alt="Lotus Tower" />
+              <Image src="/images/lotustower.jpg" alt="Lotus Tower" width={400} height={300} style={{ width: '100%', height: 'auto' }} />
               <div className="icons">
                 <a href="#"> <i className="fas fa-calendar"></i> 25th Dec, 2022 </a>
                 <a href="#"> <i className="fas fa-user"></i> by admin </a>
@@ -182,7 +182,7 @@ export default function Home() {
               <Link href="/destinations" className="btn">read more</Link>
             </div>
             <div className="swiper-slide slide">
-              <img src="/images/gallefort.webp" alt="Galle Fort" />
+              <Image src="/images/gallefort.webp" alt="Galle Fort" width={400} height={300} style={{ width: '100%', height: 'auto' }} />
               <div className="icons">
                 <a href="#"> <i className="fas fa-calendar"></i> 25th Dec, 2022 </a>
                 <a href="#"> <i className="fas fa-user"></i> by admin </a>
@@ -192,7 +192,7 @@ export default function Home() {
               <Link href="/destinations" className="btn">read more</Link>
             </div>
             <div className="swiper-slide slide">
-              <img src="/images/dalada.webp" alt="Temple Of Tooth" />
+              <Image src="/images/dalada.webp" alt="Temple Of Tooth" width={400} height={300} style={{ width: '100%', height: 'auto' }} />
               <div className="icons">
                 <a href="#"> <i className="fas fa-calendar"></i> 15th Jun, 2026 </a>
                 <a href="#"> <i className="fas fa-user"></i> by admin </a>
@@ -202,7 +202,7 @@ export default function Home() {
               <Link href="/destinations" className="btn">read more</Link>
             </div>
             <div className="swiper-slide slide">
-              <img src="/images/unawatuna.webp" alt="Unawatuna Beach" />
+              <Image src="/images/unawatuna.webp" alt="Unawatuna Beach" width={400} height={300} style={{ width: '100%', height: 'auto' }} />
               <div className="icons">
                 <a href="#"> <i className="fas fa-calendar"></i> 15th Jun, 2026 </a>
                 <a href="#"> <i className="fas fa-user"></i> by admin </a>
@@ -212,7 +212,7 @@ export default function Home() {
               <Link href="/destinations" className="btn">read more</Link>
             </div>
             <div className="swiper-slide slide">
-              <img src="/images/peradeniya.webp" alt="Peradeniya Botanical Garden" />
+              <Image src="/images/peradeniya.webp" alt="Peradeniya Botanical Garden" width={400} height={300} style={{ width: '100%', height: 'auto' }} />
               <div className="icons">
                 <a href="#"> <i className="fas fa-calendar"></i> 15th Jun, 2026 </a>
                 <a href="#"> <i className="fas fa-user"></i> by admin </a>
@@ -222,7 +222,7 @@ export default function Home() {
               <Link href="/destinations" className="btn">read more</Link>
             </div>
             <div className="swiper-slide slide">
-              <img src="/images/gangarama.jpg" alt="Gangaramaya Temple" />
+              <Image src="/images/gangarama.jpg" alt="Gangaramaya Temple" width={400} height={300} style={{ width: '100%', height: 'auto' }} />
               <div className="icons">
                 <a href="#"> <i className="fas fa-calendar"></i> 15th Jun, 2026 </a>
                 <a href="#"> <i className="fas fa-user"></i> by admin </a>
@@ -466,7 +466,7 @@ export default function Home() {
             <div className="swiper-slide slide">
               <p className="text">My family were based in Negombo for two weeks and Rukshan took us on a number of excursions including Sigiriya, Dambulla, Nuwara Eliya, Ella, Kandy and Galle. Rukshan is very friendly and an excellent tour guide who is flexible, experienced and knowledgeable about the key sites across Sri Lanka - I highly recommend him.</p>
               <div className="user">
-                <img src="/images/pic-1.png" alt="Samara Smith" />
+                <Image src="/images/pic-1.png" alt="Samara Smith" width={100} height={100} />
                 <div className="info">
                   <h3>Samara Smith</h3>
                   <span>10 months ago</span>
@@ -476,7 +476,7 @@ export default function Home() {
             <div className="swiper-slide slide">
               <p className="text">I have been to Sri Lanka for 2 times now and I really love the country and the people there. We help some poor people there who are now close family! We travelled around the country with a great guide named Wicky.</p>
               <div className="user">
-                <img src="/images/pic-2.png" alt="Simona Alixa" />
+                <Image src="/images/pic-2.png" alt="Simona Alixa" width={100} height={100} />
                 <div className="info">
                   <h3>Simona Alixa</h3>
                   <span>New Zealand</span>
@@ -486,7 +486,7 @@ export default function Home() {
             <div className="swiper-slide slide">
               <p className="text">If you want to explore the must-see sights of Sri Lanka, but also enjoy your well-earned vacation from work, here are our suggestions on how to make the most of your days in the land of serendipity.</p>
               <div className="user">
-                <img src="/images/pic-3.png" alt="Petra Marick" />
+                <Image src="/images/pic-3.png" alt="Petra Marick" width={100} height={100} />
                 <div className="info">
                   <h3>Petra Marick</h3>
                   <span>London</span>
@@ -496,7 +496,7 @@ export default function Home() {
             <div className="swiper-slide slide">
               <p className="text">Sri Lanka is known for its rich culture and history, with fascinating temples and tea plantations to explore. The country is home to amazing wildlife and exotic flora and fauna, and visitors can experience all of this in the beautiful national parks.</p>
               <div className="user">
-                <img src="/images/pic-4.png" alt="Chloe Loues" />
+                <Image src="/images/pic-4.png" alt="Chloe Loues" width={100} height={100} />
                 <div className="info">
                   <h3>Chloe Loues</h3>
                   <span>Korea</span>
@@ -506,7 +506,7 @@ export default function Home() {
             <div className="swiper-slide slide">
               <p className="text">Sri Lanka (historically known as Ceylon) has been called “the gem of the Indian ocean” because of its shape and location. Sri Jayewardenepura Kotte is its legislative capital, and Colombo is its largest city and centre of commerce.</p>
               <div className="user">
-                <img src="/images/pic-5.png" alt="john deo" />
+                <Image src="/images/pic-5.png" alt="john deo" width={100} height={100} />
                 <div className="info">
                   <h3>john deo</h3>
                   <span>USA</span>
@@ -516,7 +516,7 @@ export default function Home() {
             <div className="swiper-slide slide">
               <p className="text">Sri Lanka is a popular backpacker destination and known to be really cheap. We gathered a few tips for all the travelers who are really on a budget. </p>
               <div className="user">
-                <img src="/images/pic-6.png" alt="Jing lee" />
+                <Image src="/images/pic-6.png" alt="Jing lee" width={100} height={100} />
                 <div className="info">
                   <h3>Jing lee</h3>
                   <span>China</span>
